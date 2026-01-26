@@ -2,8 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devenvest - Real Estate Investment</title>
+    <title>Devenvest - Real Estate Investment | Professional Developer</title>
+    <meta name="description"
+        content="Real estate investments in residential, commercial and industrial properties. Returns 25-50% annually. Complete legal protection and transparency.">
+    <meta name="author" content="Devenvest">
+    <link rel="canonical" href="https://devenvest.com">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devenvest.com">
+    <meta property="og:title" content="Devenvest - Real Estate Investment Platform">
+    <meta property="og:description" content="Invest in high-return real estate projects with legal security.">
+    <meta property="og:image" content="https://devenvest.com/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://devenvest.com">
+    <meta property="twitter:title" content="Devenvest - Real Estate Investment">
+    <meta property="twitter:description" content="Invest in real estate with complete transparency.">
     <style>
         * {
             margin: 0;
@@ -11,324 +27,1523 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e3a8a;
+            --accent: #f59e0b;
+            --surface: #f8fafc;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
         }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* Header Navigation */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 20px 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
         }
 
-        nav {
-            max-width: 1200px;
+        .nav-container {
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            height: 72px;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #fbbf24;
-        }
-
-        nav ul {
+        .nav-flex {
             display: flex;
-            list-style: none;
-            gap: 30px;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #fbbf24;
+        .logo-link:hover {
+            color: var(--secondary);
         }
 
-        .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 100px 20px;
+        .logo-link img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: var(--secondary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+
+        .mobile-menu-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 101;
+            overflow-y: auto;
+            flex-direction: column;
+        }
+
+        .mobile-menu-overlay.active,
+        .mobile-menu-panel.active {
+            display: flex;
+        }
+
+        /* Hero Section */
+        .hero-pattern {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            overflow: hidden;
+            padding: 120px 24px;
+            color: var(--white);
+        }
+
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
             text-align: center;
+            max-width: 800px;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .hero-badge {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.2);
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
         }
 
-        .hero p {
+        .hero-title {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
             font-size: 20px;
-            margin-bottom: 30px;
+            font-weight: 300;
             opacity: 0.95;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
             display: inline-block;
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
+            cursor: pointer;
         }
 
-        .btn:hover {
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
             background: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 24px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        .section {
-            padding: 80px 20px;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
+        .section-header {
             text-align: center;
-            color: #1e3a8a;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .section-tag {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 16px;
         }
 
-        .card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .section-title {
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        .section-desc {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
-        .card h3 {
-            color: #1e3a8a;
-            margin-bottom: 15px;
-            font-size: 22px;
+        /* About Section */
+        #about {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
         }
 
-        .about {
-            background: #f3f4f6;
-        }
-
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 60px;
             align-items: center;
         }
 
-        .about-text h3 {
-            color: #fbbf24;
-            font-size: 24px;
-            margin-bottom: 15px;
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            line-height: 1.3;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
+        .about-text p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        .about-tag {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             display: block;
+            margin-bottom: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            padding-left: 20px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary);
             margin-bottom: 8px;
-            color: #1e3a8a;
-            font-weight: 500;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #d1d5db;
-            border-radius: 5px;
-            font-family: inherit;
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .principles-box {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .principles-box h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 32px;
+        }
+
+        .principle-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .principle-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .principle-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .principle-content strong {
+            display: block;
+            color: var(--primary);
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .principle-content {
+            color: var(--text-light);
             font-size: 14px;
+            line-height: 1.6;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+        /* Trust Section */
+        #trust {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #fbbf24;
-            box-shadow: 0 0 5px rgba(251, 191, 36, 0.3);
-        }
-
-        footer {
-            background: #1e3a8a;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
             margin-top: 60px;
         }
 
-        footer a {
-            color: #fbbf24;
-            text-decoration: none;
+        .trust-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
         }
 
+        .trust-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .trust-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .trust-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .trust-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .project-type {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--primary);
+            z-index: 2;
+        }
+
+        .project-yield {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .project-content {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .project-location {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .project-desc {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .project-specs {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .spec-label {
+            color: var(--text-light);
+        }
+
+        .spec-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .spec-value.highlight {
+            color: var(--accent);
+            font-size: 14px;
+        }
+
+        /* Progress Section */
+        #progress {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .progress-cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 60px;
+        }
+
+        .progress-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .progress-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .progress-card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .progress-card-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+
+        /* Partners Section */
+        #partners {
+            background: var(--primary);
+            color: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .partners-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .partners-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .partners-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .partners-box h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .partners-list {
+            list-style: none;
+        }
+
+        .partners-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .partners-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .partners-list span:first-child {
+            color: var(--accent);
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .btn-partners {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: all 0.3s;
+        }
+
+        .btn-partners:hover {
+            background: #f59e0b;
+        }
+
+        /* Founder Section */
+        #founder {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(251, 191, 36, 0.1);
+            transform: translate(16px, 16px);
+            border-radius: 8px;
+        }
+
+        .founder-image img {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+        }
+
+        .founder-image:hover img {
+            filter: grayscale(0);
+        }
+
+        .founder-content h2 {
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .founder-quote {
+            font-size: 18px;
+            color: var(--text-light);
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 24px;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .founder-content p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .founder-tag {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .skill-item::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .founder-contact {
+            margin-top: 32px;
+        }
+
+        .founder-contact a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .founder-contact a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .founder-contact a span {
+            margin-left: 8px;
+        }
+
+        /* Blog Section */
+        #blog {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 60px;
+        }
+
+        .blog-post {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 20px 24px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-number {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent);
+            flex-shrink: 0;
+            width: 40px;
+        }
+
+        .blog-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text);
+            flex-grow: 1;
+        }
+
+        .blog-post:hover .blog-title {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 24px 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            grid-column: span 1;
+        }
+
+        .footer-brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand-logo img {
+            height: 32px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer-brand-text {
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                gap: 15px;
-                font-size: 14px;
+            .nav-menu {
+                display: none;
             }
 
-            .hero h1 {
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-title {
                 font-size: 32px;
             }
 
-            .about-content {
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .about-grid,
+            .founders-grid,
+            .partners-grid,
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .trust-grid,
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section h2 {
-                font-size: 28px;
+            .progress-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 </head>
+
 <body>
+    <!-- Header Navigation -->
     <header>
-        <nav>
-            <div class="logo">🏢 DEVENVEST</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-flex">
+                    <a href="#" class="logo-link">
+                        <span>🏢</span>
+                        <span>Devenvest</span>
+                    </a>
+                    <nav class="nav-menu">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#trust" class="nav-link">Security</a>
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#progress" class="nav-link">Transparency</a>
+                        <a href="#partners" class="nav-link">Partners</a>
+                        <a href="https://t.me/devenvest" class="nav-btn">Telegram</a>
+                    </nav>
+                </div>
+                <button class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Real Estate Investment Excellence</h1>
-        <p>Building wealth through smart property investments</p>
-        <a href="#contact" class="btn">Get Started</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu-panel" id="menuPanel">
+        <div style="padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 18px; font-weight: 600; color: var(--primary);">🏢 Devenvest</div>
+            <button onclick="toggleMenu()" style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
+        </div>
+        <nav style="flex-grow: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
+            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">About</a>
+            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Security</a>
+            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Projects</a>
+            <a href="#progress" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Transparency</a>
+            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Partners</a>
+        </nav>
+        <div style="padding: 32px; border-top: 1px solid var(--border);">
+            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;">Telegram Channel</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern">
+        <div class="hero-content">
+            <div class="hero-badge">Collective Investments</div>
+            <h1 class="hero-title">Real Estate Investments<br>in <span class="highlight">Profitable Assets</span></h1>
+            <p class="hero-subtitle">Access large real estate projects with small capital. Diversification with legal protection for every investment.</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://t.me/devenvest" class="btn btn-secondary">Contact Founder</a>
+            </div>
+        </div>
     </section>
 
-    <section id="about" class="section about">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <h2>About Devenvest</h2>
-            <div class="about-content">
+            <div class="about-grid">
                 <div class="about-text">
-                    <h3>Professional Real Estate Investment</h3>
-                    <p>We specialize in identifying and developing high-potential real estate projects. With years of experience in the market, our team delivers exceptional returns for our investors.</p>
-                    <p style="margin-top: 15px;">Our approach combines market analysis, strategic planning, and expert execution to ensure project success.</p>
+                    <span class="about-tag">About Company</span>
+                    <h2>Bridge Between Private Capital and Large Projects</h2>
+                    <p>We are a full-cycle investment company. We don't just connect investors and developers — we create, structure, and manage real estate projects.</p>
+                    <p>Since 2020, we syndicate deals for private investors to participate in projects usually available only to large funds: residential complexes, commercial spaces, and industrial facilities.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">$50M+</div>
+                            <div class="stat-label">Under Management</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15+ Years</div>
+                            <div class="stat-label">Team Experience</div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=400&fit=crop" alt="Office" style="width: 100%; border-radius: 8px;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Our Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🏗️ Residential Complex</h3>
-                    <p>Modern apartment buildings with premium amenities and sustainable design.</p>
-                </div>
-                <div class="card">
-                    <h3>🏢 Commercial Spaces</h3>
-                    <p>High-return commercial properties in strategic business districts.</p>
-                </div>
-                <div class="card">
-                    <h3>🏘️ Mixed Development</h3>
-                    <p>Integrated communities combining residential, commercial, and retail spaces.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section" style="background: #f3f4f6;">
-        <div class="container">
-            <h2>Our Team</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>📸</h3>
-                    <h3>Founder & Director</h3>
-                    <p>Expert in real estate development with 15+ years of experience in the industry.</p>
-                </div>
-                <div class="card">
-                    <h3>💼</h3>
-                    <h3>Project Manager</h3>
-                    <p>Ensuring every project is delivered on time and within budget.</p>
-                </div>
-                <div class="card">
-                    <h3>📊</h3>
-                    <h3>Investment Analyst</h3>
-                    <p>Analyzing market trends and identifying profitable opportunities.</p>
+                <div class="principles-box">
+                    <h3>Our Principles</h3>
+                    <div class="principle-item">
+                        <div class="principle-icon">🏗️</div>
+                        <div class="principle-content">
+                            <strong>Real Assets</strong>
+                            <span>Only real estate and land. No virtual instruments.</span>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon">🔍</div>
+                        <div class="principle-content">
+                            <strong>Deep Expertise</strong>
+                            <span>We analyze every project, verify financials and legal status.</span>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon">🤝</div>
+                        <div class="principle-content">
+                            <strong>Co-Investment</strong>
+                            <span>Founder personally invests alongside you in most projects.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Trust Section -->
+    <section id="trust">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="section-header">
+                <span class="section-tag">Security</span>
+                <h2 class="section-title">How Are Your Investments Protected?</h2>
+                <p class="section-desc">We use transparent collateral management according to international standards. This is market standard for collective investment protection.</p>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">🔐</div>
+                    <h3>Real Collateral</h3>
+                    <p>Every dollar is backed by liquid real estate (land or properties) with value exceeding the loan amount.</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>Asset Protection</h3>
+                    <p>Assets are segregated and protected. They cannot be claimed for personal debts of the manager.</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+                <div class="trust-card">
+                    <div class="trust-icon">📄</div>
+                    <h3>Transparency</h3>
+                    <p>All collateral is registered. Each investor receives official legal documentation confirming their position.</p>
                 </div>
-                <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Showcase</span>
+                <h2 class="section-title">Active Projects</h2>
+                <p class="section-desc">Choose projects with clear economics and solid collateral backing.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        🏘️
+                        <div class="project-type">Residential</div>
+                        <div class="project-yield">35%</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Luxury Homes Complex</h3>
+                        <p class="project-location">Premium District, 30km from Center</p>
+                        <p class="project-desc">Modern residential complex with 200 units, amenities, and landscaped grounds. Prime location with high appreciation potential.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">35% annually</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Entry</span>
+                                <span class="spec-value">from $100k</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Duration</span>
+                                <span class="spec-value">12 months</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;">Get Presentation</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        🏭
+                        <div class="project-type">Industrial</div>
+                        <div class="project-yield">40%</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Logistics Hub</h3>
+                        <p class="project-location">Industrial Zone, 15km from Center</p>
+                        <p class="project-desc">Class A warehouse facility. Modern logistics complex with high rental demand and long-term tenants. Strong cash flow.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">40% annually</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Entry</span>
+                                <span class="spec-value">from $150k</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Duration</span>
+                                <span class="spec-value">12 months</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;">Get Presentation</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        🏨
+                        <div class="project-type">Hospitality</div>
+                        <div class="project-yield">30%</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Resort Hotel Development</h3>
+                        <p class="project-location">Coastal Area, Tourism Destination</p>
+                        <p class="project-desc">Renovation and repositioning of existing hospitality asset. Strong seasonal demand with international tourism potential.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">10-30% annually</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Entry</span>
+                                <span class="spec-value">from $120k</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Type</span>
+                                <span class="spec-value">Room Purchase</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transparency</span>
+                <h2 class="section-title">Real-Time Project Updates</h2>
+                <p class="section-desc">We maintain open Telegram channels for each project. Subscribe to see actual construction progress and decision-making.</p>
+            </div>
+            <div class="progress-cards">
+                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
+                    <div class="progress-card-icon">🏗️</div>
+                    <div class="progress-card-text">Logistics Hub</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
+                    <div class="progress-card-icon">🏘️</div>
+                    <div class="progress-card-text">Luxury Homes</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
+                    <div class="progress-card-icon">🏨</div>
+                    <div class="progress-card-text">Resort Hotel</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
+                    <div class="progress-card-icon">🏢</div>
+                    <div class="progress-card-text">Commercial Space</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
+                    <div class="progress-card-icon">🌳</div>
+                    <div class="progress-card-text">Master Plans</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partners-text">
+                    <span class="about-tag" style="color: var(--accent);">Networking</span>
+                    <h2>For Developers and Partners</h2>
+                    <p>Looking for funding or partnership? We're open to joint ventures in residential, commercial, and industrial real estate.</p>
+                    <p>Join our closed developer community for experience sharing and resource discovery.</p>
+                    <a href="https://t.me/devenvest" class="btn-partners">Join Developer Club</a>
+                </div>
+                <div class="partners-box">
+                    <h3>What We Offer</h3>
+                    <ul class="partners-list">
+                        <li>
+                            <span>•</span>
+                            <strong>Financing:</strong> Capital for reliable projects.
+                        </li>
+                        <li>
+                            <span>•</span>
+                            <strong>Expertise:</strong> Packaging, marketing, and sales.
+                        </li>
+                        <li>
+                            <span>•</span>
+                            <strong>Masterminds:</strong> Regular live sessions for case reviews.
+                        </li>
+                        <li>
+                            <span>•</span>
+                            <strong>Network:</strong> Vetted contractors, lawyers, architects.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
+                </div>
+                <div class="founder-content">
+                    <span class="founder-tag">Founder</span>
+                    <h2>Real Estate Entrepreneur</h2>
+                    <p class="founder-quote">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</p>
+                    <p>Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</p>
+                    <div class="skills-grid">
+                        <div class="skill-item">Deal Structuring</div>
+                        <div class="skill-item">Development Management</div>
+                        <div class="skill-item">Investment Analysis</div>
+                        <div class="skill-item">Portfolio Management</div>
+                    </div>
+                    <div class="founder-contact">
+                        <a href="https://t.me/devenvest">
+                            Write in Telegram
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Founder's Blog</span>
+                <h2 class="section-title">Most Popular Insights</h2>
+                <p class="section-desc">Top insights from our investment newsletter. Practical knowledge and case studies from the real estate world.</p>
+            </div>
+            <div class="blog-posts">
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">1</div>
+                    <div class="blog-title">How to Evaluate Real Estate Projects: Complete Framework</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">2</div>
+                    <div class="blog-title">Why Developers Offer 40% Returns: Financial Model Explained</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">3</div>
+                    <div class="blog-title">Passive Income in Real Estate: 5 Common Myths Debunked</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">4</div>
+                    <div class="blog-title">Legal Protection for Investors: What Really Matters</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">5</div>
+                    <div class="blog-title">Building a Real Estate Portfolio: Diversification Strategy</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">6</div>
+                    <div class="blog-title">Market Cycles and Timing: When to Invest</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">7</div>
+                    <div class="blog-title">Due Diligence Checklist for Real Estate Deals</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">8</div>
+                    <div class="blog-title">Exit Strategies in Real Estate: Planning Your Exit</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">9</div>
+                    <div class="blog-title">Risk Management in Collective Investments</div>
+                </a>
+                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
+                    <div class="blog-number">10</div>
+                    <div class="blog-title">Future of Real Estate: Trends and Opportunities</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Devenvest. All rights reserved.</p>
-        <p>📧 <a href="mailto:info@devenvest.com">info@devenvest.com</a></p>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo">
+                        <span style="font-size: 24px;">🏢</span>
+                        <span class="footer-brand-name">Devenvest</span>
+                    </div>
+                    <p class="footer-brand-text">Professional real estate investment platform. Creating reliable and transparent products for investors.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Company</a></li>
+                        <li><a href="#trust">Security</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#progress">Transparency</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#blog">📚 Blog</a></li>
+                        <li><a href="#founder">About Founder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://t.me/devenvest">📢 Telegram Channel</a></li>
+                        <li><a href="https://t.me/devenvest">💬 Direct Message</a></li>
+                        <li><a href="mailto:info@devenvest.com">📧 Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Devenvest. All rights reserved.</p>
+                <span>Professional Real Estate Investment Platform</span>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const overlay = document.getElementById('menuOverlay');
+            const panel = document.getElementById('menuPanel');
+            overlay.classList.toggle('active');
+            panel.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuPanel = document.getElementById('menuPanel');
+            const hamburger = document.querySelector('.hamburger');
+            const overlay = document.getElementById('menuOverlay');
+            
+            if (!menuPanel.contains(event.target) && !hamburger.contains(event.target)) {
+                menuPanel.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
 </body>
+
 </html>
