@@ -24,13 +24,13 @@
         }
 
         :root {
-            --primary: #0f172a;
-            --secondary: #1e3a8a;
-            --accent: #f59e0b;
-            --surface: #f8fafc;
-            --text: #0f172a;
-            --text-light: #64748b;
-            --border: #e2e8f0;
+            --primary: #1a1a1a;
+            --secondary: #2d2d2d;
+            --accent: #d4a574;
+            --surface: #f5f3f0;
+            --text: #1a1a1a;
+            --text-light: #666666;
+            --border: #e0ddd8;
             --white: #ffffff;
         }
 
@@ -93,7 +93,7 @@
         }
 
         .logo-link:hover {
-            color: var(--secondary);
+            color: var(--accent);
         }
 
         .logo-link img {
@@ -130,7 +130,8 @@
         }
 
         .nav-btn:hover {
-            background: var(--secondary);
+            background: var(--accent);
+            color: var(--primary);
         }
 
         .hamburger {
@@ -182,7 +183,7 @@
         /* Hero Section */
         .hero-pattern {
             position: relative;
-            background: #f5f5f7;
+            background: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%);
             overflow: hidden;
             padding: 120px 24px;
             color: var(--text);
@@ -199,7 +200,7 @@
             right: 0;
             width: 50%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(212, 165, 116, 0.05);
             pointer-events: none;
         }
 
@@ -214,8 +215,8 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(251, 191, 36, 0.2);
-            border: 1px solid rgba(251, 191, 36, 0.4);
+            background: rgba(212, 165, 116, 0.15);
+            border: 1px solid rgba(212, 165, 116, 0.3);
             color: var(--accent);
             padding: 8px 16px;
             border-radius: 20px;
@@ -269,22 +270,22 @@
 
         .btn-primary {
             background: var(--accent);
-            color: var(--primary);
+            color: var(--white);
         }
 
         .btn-primary:hover {
-            background: #f59e0b;
+            background: #c89661;
             transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background: rgba(15, 23, 42, 0.1);
+            background: rgba(26, 26, 26, 0.1);
             color: var(--primary);
             border: 2px solid var(--primary);
         }
 
         .btn-secondary:hover {
-            background: rgba(15, 23, 42, 0.2);
+            background: rgba(26, 26, 26, 0.2);
         }
 
         /* Sections */
@@ -519,7 +520,7 @@
         .project-image {
             width: 100%;
             height: 240px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #d4a574 0%, #c89661 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -533,6 +534,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .project-image::after {
@@ -565,7 +569,7 @@
             bottom: 16px;
             right: 16px;
             background: var(--accent);
-            color: var(--primary);
+            color: var(--white);
             padding: 8px 16px;
             border-radius: 6px;
             font-weight: 600;
@@ -710,7 +714,7 @@
         .btn-partners {
             display: inline-block;
             background: var(--accent);
-            color: var(--primary);
+            color: var(--white);
             padding: 14px 32px;
             border-radius: 6px;
             font-weight: 600;
@@ -719,7 +723,7 @@
         }
 
         .btn-partners:hover {
-            background: #f59e0b;
+            background: #c89661;
         }
 
         /* Founder Section */
@@ -748,6 +752,12 @@
             overflow: hidden;
             margin-bottom: 32px;
             border: 1px solid var(--border);
+            background: linear-gradient(135deg, #d4a574 0%, #c89661 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
         }
 
         .founder-image-wrapper img {
@@ -812,7 +822,7 @@
         .founder-contact a {
             display: inline-block;
             background: var(--accent);
-            color: var(--primary);
+            color: var(--white);
             padding: 12px 28px;
             border-radius: 6px;
             font-weight: 600;
@@ -820,7 +830,7 @@
         }
 
         .founder-contact a:hover {
-            background: #f59e0b;
+            background: #c89661;
             transform: translateY(-2px);
         }
 
@@ -1126,7 +1136,7 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/EstateImage%20-%202023-11-09T194205.622.jpg" alt="Клубный дом">
+                        🏘️
                         <div class="project-type">Жилой</div>
                         <div class="project-yield">40%</div>
                     </div>
@@ -1155,7 +1165,7 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400?text=Варна+Комплекс" alt="Жилой комплекс Варна">
+                        🏢
                         <div class="project-type">Жилой комплекс</div>
                         <div class="project-yield">75%</div>
                     </div>
@@ -1230,7 +1240,7 @@
                 <!-- Founder 1: Александр Фанайлов -->
                 <div class="founder-card">
                     <div class="founder-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/%D0%94%D0%BB%D1%8F%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5.png" alt="Александр Фанайлов">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADwAPADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlbaWmJmaoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="Александр Фанайлов" style="object-position: center;">
                     </div>
                     <div class="founder-content">
                         <h3>Александр Фанайлов</h3>
@@ -1251,7 +1261,7 @@
                 <!-- Founder 2 -->
                 <div class="founder-card">
                     <div class="founder-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/Для%20резюме-min.png" alt="Второй основатель">
+                        👤
                     </div>
                     <div class="founder-content">
                         <h3>Ваше имя</h3>
