@@ -8,18 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devenvest - Real Estate Investment | Professional Developer</title>
     <meta name="description"
-        content="Real estate investments in residential, commercial and industrial properties. Returns 25-50% annually. Complete legal protection and transparency.">
+        content="Инвестиции в прибыльные активы с опытным партнером. Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита.">
     <meta name="author" content="Devenvest">
     <link rel="canonical" href="https://devenvest.com">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devenvest.com">
-    <meta property="og:title" content="Devenvest - Real Estate Investment Platform">
-    <meta property="og:description" content="Invest in high-return real estate projects with legal security.">
+    <meta property="og:title" content="Devenvest - Инвестиции в недвижимость">
+    <meta property="og:description" content="Вход в большие проекты с малым чеком. Юридическая защита каждой инвестиции.">
     <meta property="og:image" content="https://devenvest.com/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://devenvest.com">
-    <meta property="twitter:title" content="Devenvest - Real Estate Investment">
-    <meta property="twitter:description" content="Invest in real estate with complete transparency.">
     <style>
         * {
             margin: 0;
@@ -183,10 +179,10 @@
             display: flex;
         }
 
-        /* Hero Section - СВЕТЛО-СЕРЫЙ ОДНОТОННЫЙ ФОНОВ */
+        /* Hero Section */
         .hero-pattern {
             position: relative;
-            background: #f5f5f7 !important;
+            background: #f5f5f7;
             overflow: hidden;
             padding: 120px 24px;
             color: var(--text);
@@ -499,7 +495,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 32px;
             margin-top: 60px;
         }
@@ -637,46 +633,6 @@
             font-size: 14px;
         }
 
-        /* Progress Section */
-        #progress {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .progress-cards {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-            margin-top: 60px;
-        }
-
-        .progress-card {
-            background: var(--white);
-            padding: 32px 24px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .progress-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .progress-card-icon {
-            font-size: 40px;
-            margin-bottom: 16px;
-        }
-
-        .progress-card-text {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
-            line-height: 1.4;
-        }
-
         /* Partners Section */
         #partners {
             background: var(--primary);
@@ -765,13 +721,6 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .founders-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
         .founder-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -797,7 +746,7 @@
             position: relative;
             width: 100%;
             border-radius: 8px;
-            filter: grayscale(1);
+            filter: grayscale(0);
             transition: filter 0.3s;
         }
 
@@ -889,55 +838,6 @@
             margin-left: 8px;
         }
 
-        /* Blog Section */
-        #blog {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .blog-posts {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-top: 60px;
-        }
-
-        .blog-post {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            padding: 20px 24px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .blog-post:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .blog-number {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--accent);
-            flex-shrink: 0;
-            width: 40px;
-        }
-
-        .blog-title {
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--text);
-            flex-grow: 1;
-        }
-
-        .blog-post:hover .blog-title {
-            color: var(--primary);
-        }
-
         /* Footer */
         footer {
             background: var(--primary);
@@ -1026,151 +926,6 @@
             color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Advanced Visual Effects */
-        .section-header::before {
-            content: '';
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -40px;
-            left: 5%;
-            pointer-events: none;
-        }
-
-        .section-header {
-            position: relative;
-        }
-
-        /* Gradient Text Effect */
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Card Glow Effect */
-        .trust-card, .project-card {
-            position: relative;
-            background: var(--white);
-        }
-
-        .trust-card::before, .project-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(15, 23, 42, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s;
-            border-radius: 8px;
-            pointer-events: none;
-        }
-
-        .trust-card:hover::before, .project-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Animated Icon */
-        .principle-icon {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Progress Bar Animation */
-        .progress-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .progress-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            transition: left 0.3s;
-        }
-
-        .progress-card:hover::after {
-            left: 100%;
-        }
-
-        /* Stagger Animation for Blog Posts */
-        .blog-post {
-            animation: slideIn 0.5s ease-out forwards;
-            opacity: 0;
-        }
-
-        .blog-post:nth-child(1) { animation-delay: 0.1s; }
-        .blog-post:nth-child(2) { animation-delay: 0.2s; }
-        .blog-post:nth-child(3) { animation-delay: 0.3s; }
-        .blog-post:nth-child(4) { animation-delay: 0.4s; }
-        .blog-post:nth-child(5) { animation-delay: 0.5s; }
-        .blog-post:nth-child(6) { animation-delay: 0.6s; }
-        .blog-post:nth-child(7) { animation-delay: 0.7s; }
-        .blog-post:nth-child(8) { animation-delay: 0.8s; }
-        .blog-post:nth-child(9) { animation-delay: 0.9s; }
-        .blog-post:nth-child(10) { animation-delay: 1s; }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Counter Animation */
-        .stat-value {
-            font-variant-numeric: tabular-nums;
-        }
-
-        /* Enhanced Button Effects */
-        .btn {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            pointer-events: none;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        /* Language Toggle */
-        .lang-toggle {
-            transition: all 0.3s ease;
-        }
-
-        .lang-toggle:hover {
-            background: var(--secondary) !important;
-            transform: scale(1.05);
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .nav-menu {
@@ -1194,20 +949,18 @@
             }
 
             .about-grid,
-            .founders-grid,
             .partners-grid,
             .founder-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
-            .trust-grid,
-            .projects-grid {
+            .trust-grid {
                 grid-template-columns: 1fr;
             }
 
-            .progress-cards {
-                grid-template-columns: repeat(2, 1fr);
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-grid {
@@ -1251,13 +1004,11 @@
                         <span>Devenvest</span>
                     </a>
                     <nav class="nav-menu">
-                        <a href="#about" class="nav-link"><span class="lang-en">About</span><span class="lang-ru" style="display:none;">О нас</span></a>
-                        <a href="#trust" class="nav-link"><span class="lang-en">Security</span><span class="lang-ru" style="display:none;">Безопасность</span></a>
-                        <a href="#projects" class="nav-link"><span class="lang-en">Projects</span><span class="lang-ru" style="display:none;">Проекты</span></a>
-                        <a href="#progress" class="nav-link"><span class="lang-en">Transparency</span><span class="lang-ru" style="display:none;">Прозрачность</span></a>
-                        <a href="#partners" class="nav-link"><span class="lang-en">Partners</span><span class="lang-ru" style="display:none;">Партнёры</span></a>
-                        <a href="https://t.me/devenvest" class="nav-btn">Telegram</a>
-                        <button class="lang-toggle" onclick="toggleLanguage()" style="background: var(--accent); color: var(--primary); padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; border: none; margin-left: 16px;">EN</button>
+                        <a href="#about" class="nav-link">О компании</a>
+                        <a href="#trust" class="nav-link">Безопасность</a>
+                        <a href="#projects" class="nav-link">Проекты</a>
+                        <a href="#partners" class="nav-link">Партнёрам</a>
+                        <a href="#founder" class="nav-link">Основатель</a>
                     </nav>
                 </div>
                 <button class="hamburger" onclick="toggleMenu()">
@@ -1277,26 +1028,26 @@
             <button onclick="toggleMenu()" style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
         </div>
         <nav style="flex-grow: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
-            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">About</a>
-            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Security</a>
-            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Projects</a>
-            <a href="#progress" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Transparency</a>
-            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Partners</a>
+            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">О компании</a>
+            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Безопасность</a>
+            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Проекты</a>
+            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Партнёрам</a>
+            <a href="#founder" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Основатель</a>
         </nav>
         <div style="padding: 32px; border-top: 1px solid var(--border);">
-            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;">Telegram Channel</a>
+            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;">Telegram Канал</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero-pattern">
         <div class="hero-content">
-            <div class="hero-badge"><span class="lang-en">Collective Investments</span><span class="lang-ru" style="display:none;">Коллективные инвестиции</span></div>
-            <h1 class="hero-title"><span class="lang-en">Real Estate Investments<br>in <span class="highlight">Profitable Assets</span></span><span class="lang-ru" style="display:none;">Инвестиции в недвижимость<br>в <span class="highlight">прибыльные активы</span></span></h1>
-            <p class="hero-subtitle"><span class="lang-en">Access large real estate projects with small capital. Diversification with legal protection for every investment.</span><span class="lang-ru" style="display:none;">Доступ к крупным проектам недвижимости с небольшим капиталом. Диверсификация с юридической защитой каждого инвестирования.</span></p>
+            <div class="hero-badge">Коллективные инвестиции</div>
+            <h1 class="hero-title">Инвестиции в <span class="highlight">прибыльные активы</span> с опытным партнером</h1>
+            <p class="hero-subtitle">Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции</p>
             <div class="btn-group">
-                <a href="#projects" class="btn btn-primary"><span class="lang-en">View Projects</span><span class="lang-ru" style="display:none;">Посмотреть проекты</span></a>
-                <a href="https://t.me/devenvest" class="btn btn-secondary"><span class="lang-en">Contact Founder</span><span class="lang-ru" style="display:none;">Связаться с основателем</span></a>
+                <a href="#projects" class="btn btn-primary">Посмотреть проекты</a>
+                <a href="https://t.me/devenvest" class="btn btn-secondary">Написать в Telegram</a>
             </div>
         </div>
     </section>
@@ -1306,42 +1057,42 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <span class="about-tag"><span class="lang-en">About Company</span><span class="lang-ru" style="display:none;">О компании</span></span>
-                    <h2><span class="lang-en">Bridge Between Private Capital and Large Projects</span><span class="lang-ru" style="display:none;">Мост между частным капиталом и крупными проектами</span></h2>
-                    <p><span class="lang-en">We are a full-cycle investment company. We don't just connect investors and developers — we create, structure, and manage real estate projects.</span><span class="lang-ru" style="display:none;">Мы инвестиционная компания полного цикла. Мы не просто соединяем инвесторов и разработчиков — мы создаём, структурируем и управляем проектами недвижимости.</span></p>
-                    <p><span class="lang-en">Since 2020, we syndicate deals for private investors to participate in projects usually available only to large funds: residential complexes, commercial spaces, and industrial facilities.</span><span class="lang-ru" style="display:none;">С 2020 года мы синдицируем сделки для частных инвесторов, чтобы участвовать в проектах, обычно доступных только крупным фондам: жилые комплексы, коммерческие площади и промышленные объекты.</span></p>
+                    <span class="about-tag">О компании</span>
+                    <h2>Когда частные деньги встречают большие проекты</h2>
+                    <p>Мы не очередная "инвестиционная компания". Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации</p>
+                    <p>Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств.</p>
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-value">$50M+</div>
-                            <div class="stat-label"><span class="lang-en">Under Management</span><span class="lang-ru" style="display:none;">Управление активами</span></div>
+                            <div class="stat-value">10+ млн €</div>
+                            <div class="stat-label">Инвестировано</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">15+ Years</div>
-                            <div class="stat-label"><span class="lang-en">Team Experience</span><span class="lang-ru" style="display:none;">Опыт команды</span></div>
+                            <div class="stat-value">20+ лет</div>
+                            <div class="stat-label">Опыта команды</div>
                         </div>
                     </div>
                 </div>
                 <div class="principles-box">
-                    <h3><span class="lang-en">Our Principles</span><span class="lang-ru" style="display:none;">Наши принципы</span></h3>
+                    <h3>Наши принципы</h3>
                     <div class="principle-item">
                         <div class="principle-icon">🏗️</div>
                         <div class="principle-content">
-                            <strong><span class="lang-en">Real Assets</span><span class="lang-ru" style="display:none;">Реальные активы</span></strong>
-                            <span><span class="lang-en">Only real estate and land. No virtual instruments.</span><span class="lang-ru" style="display:none;">Только недвижимость и земля. Никаких виртуальных инструментов.</span></span>
+                            <strong>Только бетон и земля</strong>
+                            <span>Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы.</span>
                         </div>
                     </div>
                     <div class="principle-item">
                         <div class="principle-icon">🔍</div>
                         <div class="principle-content">
-                            <strong><span class="lang-en">Deep Expertise</span><span class="lang-ru" style="display:none;">Глубокий опыт</span></strong>
-                            <span><span class="lang-en">We analyze every project, verify financials and legal status.</span><span class="lang-ru" style="display:none;">Мы анализируем каждый проект, проверяем финансовое и юридическое состояние.</span></span>
+                            <strong>Сами проверяем всё</strong>
+                            <span>Не полагаемся на "экспертов". Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев.</span>
                         </div>
                     </div>
                     <div class="principle-item">
                         <div class="principle-icon">🤝</div>
                         <div class="principle-content">
-                            <strong><span class="lang-en">Co-Investment</span><span class="lang-ru" style="display:none;">Совместное инвестирование</span></strong>
-                            <span><span class="lang-en">Founder personally invests alongside you in most projects.</span><span class="lang-ru" style="display:none;">Основатель лично инвестирует вместе с вами в большинство проектов.</span></span>
+                            <strong>Наши деньги там же, где и ваши</strong>
+                            <span>Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски.</span>
                         </div>
                     </div>
                 </div>
@@ -1353,25 +1104,25 @@
     <section id="trust">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><span class="lang-en">Security</span><span class="lang-ru" style="display:none;">Безопасность</span></span>
-                <h2 class="section-title"><span class="lang-en">How Are Your Investments Protected?</span><span class="lang-ru" style="display:none;">Как защищены ваши инвестиции?</span></h2>
-                <p class="section-desc"><span class="lang-en">We use transparent collateral management according to international standards. This is market standard for collective investment protection.</span><span class="lang-ru" style="display:none;">Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций.</span></p>
+                <span class="section-tag">Безопасность</span>
+                <h2 class="section-title">Как защищены ваши инвестиции?</h2>
+                <p class="section-desc">Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций.</p>
             </div>
             <div class="trust-grid">
                 <div class="trust-card">
                     <div class="trust-icon">🔐</div>
-                    <h3><span class="lang-en">Real Collateral</span><span class="lang-ru" style="display:none;">Реальный залог</span></h3>
-                    <p><span class="lang-en">Every dollar is backed by liquid real estate (land or properties) with value exceeding the loan amount.</span><span class="lang-ru" style="display:none;">Каждый доллар обеспечен ликвидной недвижимостью (земля или объекты) стоимостью, превышающей сумму кредита.</span></p>
+                    <h3>Реальный залог</h3>
+                    <p>Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций.</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">🛡️</div>
-                    <h3><span class="lang-en">Asset Protection</span><span class="lang-ru" style="display:none;">Защита активов</span></h3>
-                    <p><span class="lang-en">Assets are segregated and protected. They cannot be claimed for personal debts of the manager.</span><span class="lang-ru" style="display:none;">Активы отделены и защищены. Они не могут быть востребованы за личные долги менеджера.</span></p>
+                    <h3>Защита активов</h3>
+                    <p>Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства).</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">📄</div>
-                    <h3><span class="lang-en">Transparency</span><span class="lang-ru" style="display:none;">Прозрачность</span></h3>
-                    <p><span class="lang-en">All collateral is registered. Each investor receives official legal documentation confirming their position.</span><span class="lang-ru" style="display:none;">Весь залог зарегистрирован. Каждый инвестор получает официальную юридическую документацию, подтверждающую его позицию.</span></p>
+                    <h3>Всё зарегистрировано</h3>
+                    <p>Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции.</p>
                 </div>
             </div>
         </div>
@@ -1381,130 +1132,68 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><span class="lang-en">Showcase</span><span class="lang-ru" style="display:none;">Витрина</span></span>
-                <h2 class="section-title"><span class="lang-en">Active Projects</span><span class="lang-ru" style="display:none;">Активные проекты</span></h2>
-                <p class="section-desc"><span class="lang-en">Choose projects with clear economics and solid collateral backing.</span><span class="lang-ru" style="display:none;">Выбирайте проекты с чёткой экономикой и надёжным залоговым обеспечением.</span></p>
+                <span class="section-tag">Витрина</span>
+                <h2 class="section-title">Актуальные проекты</h2>
+                <p class="section-desc">Выбирайте проекты с чёткой экономикой и надёжным залоговым обеспечением.</p>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
                         🏘️
-                        <div class="project-type"><span class="lang-en">Residential</span><span class="lang-ru" style="display:none;">Жилой</span></div>
-                        <div class="project-yield">35%</div>
+                        <div class="project-type">Жилой</div>
+                        <div class="project-yield">40%</div>
                     </div>
                     <div class="project-content">
-                        <h3><span class="lang-en">Luxury Homes Complex</span><span class="lang-ru" style="display:none;">Комплекс люкс-домов</span></h3>
-                        <p class="project-location"><span class="lang-en">Premium District, 30km from Center</span><span class="lang-ru" style="display:none;">Премиум-район, 30 км от центра</span></p>
-                        <p class="project-desc"><span class="lang-en">Modern residential complex with 200 units, amenities, and landscaped grounds. Prime location with high appreciation potential.</span><span class="lang-ru" style="display:none;">Современный жилой комплекс с 200 квартирами, удобствами и благоустроенной территорией. Престижное место с высоким потенциалом роста стоимости.</span></p>
+                        <h3>«Клубный дом»</h3>
+                        <p class="project-location">Св. Константин и Елена</p>
+                        <p class="project-desc">Реконструкция здания гостиницы в жилые квартиры, изменение статуса, оформление документации согласно законодательству Болгарии и последующая продажа со свободного рынка.</p>
                         <div class="project-specs">
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Return</span><span class="lang-ru" style="display:none;">Доходность</span></span>
-                                <span class="spec-value highlight"><span class="lang-en">35% annually</span><span class="lang-ru" style="display:none;">35% годовых</span></span>
+                                <span class="spec-label">Доходность</span>
+                                <span class="spec-value highlight">40% годовых</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Entry</span><span class="lang-ru" style="display:none;">Вход</span></span>
-                                <span class="spec-value"><span class="lang-en">from $100k</span><span class="lang-ru" style="display:none;">от $100k</span></span>
+                                <span class="spec-label">Минимум</span>
+                                <span class="spec-value">€400 000</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Duration</span><span class="lang-ru" style="display:none;">Период</span></span>
-                                <span class="spec-value"><span class="lang-en">12 months</span><span class="lang-ru" style="display:none;">12 месяцев</span></span>
+                                <span class="spec-label">Период</span>
+                                <span class="spec-value">6 месяцев</span>
                             </div>
                         </div>
-                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;"><span class="lang-en">Get Presentation</span><span class="lang-ru" style="display:none;">Получить презентацию</span></a>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;">Получить презентацию</a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        🏭
-                        <div class="project-type"><span class="lang-en">Industrial</span><span class="lang-ru" style="display:none;">Промышленный</span></div>
-                        <div class="project-yield">40%</div>
+                        🏢
+                        <div class="project-type">Жилой комплекс</div>
+                        <div class="project-yield">75%</div>
                     </div>
                     <div class="project-content">
-                        <h3><span class="lang-en">Logistics Hub</span><span class="lang-ru" style="display:none;">Логистический центр</span></h3>
-                        <p class="project-location"><span class="lang-en">Industrial Zone, 15km from Center</span><span class="lang-ru" style="display:none;">Промышленная зона, 15 км от центра</span></p>
-                        <p class="project-desc"><span class="lang-en">Class A warehouse facility. Modern logistics complex with high rental demand and long-term tenants. Strong cash flow.</span><span class="lang-ru" style="display:none;">Складское помещение класса A. Современный логистический комплекс с высоким спросом на аренду и постоянными арендаторами. Сильный денежный поток.</span></p>
+                        <h3>Жилой комплекс «Варна»</h3>
+                        <p class="project-location">Варна, Болгария</p>
+                        <p class="project-desc">Строительство современного жилого комплекса в центре Варны. Квартиры с высокой арендной ставкой и потенциалом роста стоимости в динамично развивающемся районе.</p>
                         <div class="project-specs">
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Return</span><span class="lang-ru" style="display:none;">Доходность</span></span>
-                                <span class="spec-value highlight"><span class="lang-en">40% annually</span><span class="lang-ru" style="display:none;">40% годовых</span></span>
+                                <span class="spec-label">Доходность</span>
+                                <span class="spec-value highlight">75% за период</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Entry</span><span class="lang-ru" style="display:none;">Вход</span></span>
-                                <span class="spec-value"><span class="lang-en">from $150k</span><span class="lang-ru" style="display:none;">от $150k</span></span>
+                                <span class="spec-label">Минимум</span>
+                                <span class="spec-value">€500 000</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Duration</span><span class="lang-ru" style="display:none;">Период</span></span>
-                                <span class="spec-value"><span class="lang-en">12 months</span><span class="lang-ru" style="display:none;">12 месяцев</span></span>
+                                <span class="spec-label">Период</span>
+                                <span class="spec-value">3 года</span>
                             </div>
                         </div>
-                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;"><span class="lang-en">Get Presentation</span><span class="lang-ru" style="display:none;">Получить презентацию</span></a>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;">Получить подробнее</a>
                     </div>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        🏨
-                        <div class="project-type"><span class="lang-en">Hospitality</span><span class="lang-ru" style="display:none;">Гостеприимство</span></div>
-                        <div class="project-yield">30%</div>
-                    </div>
-                    <div class="project-content">
-                        <h3><span class="lang-en">Resort Hotel Development</span><span class="lang-ru" style="display:none;">Развитие курортного отеля</span></h3>
-                        <p class="project-location"><span class="lang-en">Coastal Area, Tourism Destination</span><span class="lang-ru" style="display:none;">Прибрежная зона, туристический центр</span></p>
-                        <p class="project-desc"><span class="lang-en">Renovation and repositioning of existing hospitality asset. Strong seasonal demand with international tourism potential.</span><span class="lang-ru" style="display:none;">Реновация и переориентация существующего объекта гостеприимства. Сильный сезонный спрос с международным туристическим потенциалом.</span></p>
-                        <div class="project-specs">
-                            <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Return</span><span class="lang-ru" style="display:none;">Доходность</span></span>
-                                <span class="spec-value highlight"><span class="lang-en">10-30% annually</span><span class="lang-ru" style="display:none;">10-30% годовых</span></span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Entry</span><span class="lang-ru" style="display:none;">Вход</span></span>
-                                <span class="spec-value"><span class="lang-en">from $120k</span><span class="lang-ru" style="display:none;">от $120k</span></span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label"><span class="lang-en">Type</span><span class="lang-ru" style="display:none;">Тип</span></span>
-                                <span class="spec-value"><span class="lang-en">Room Purchase</span><span class="lang-ru" style="display:none;">Покупка номера</span></span>
-                            </div>
-                        </div>
-                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center;"><span class="lang-en">Check Availability</span><span class="lang-ru" style="display:none;">Проверить доступность</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Progress Section -->
-    <section id="progress">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><span class="lang-en">Transparency</span><span class="lang-ru" style="display:none;">Прозрачность</span></span>
-                <h2 class="section-title"><span class="lang-en">Real-Time Project Updates</span><span class="lang-ru" style="display:none;">Обновления проектов в реальном времени</span></h2>
-                <p class="section-desc"><span class="lang-en">We maintain open Telegram channels for each project. Subscribe to see actual construction progress and decision-making.</span><span class="lang-ru" style="display:none;">Мы ведём открытые каналы Telegram для каждого проекта. Подпишитесь, чтобы видеть реальный прогресс строительства и принятие решений.</span></p>
-            </div>
-            <div class="progress-cards">
-                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
-                    <div class="progress-card-icon">🏗️</div>
-                    <div class="progress-card-text"><span class="lang-en">Logistics Hub</span><span class="lang-ru" style="display:none;">Логистический центр</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
-                    <div class="progress-card-icon">🏘️</div>
-                    <div class="progress-card-text"><span class="lang-en">Luxury Homes</span><span class="lang-ru" style="display:none;">Люкс-дома</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
-                    <div class="progress-card-icon">🏨</div>
-                    <div class="progress-card-text"><span class="lang-en">Resort Hotel</span><span class="lang-ru" style="display:none;">Курортный отель</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
-                    <div class="progress-card-icon">🏢</div>
-                    <div class="progress-card-text"><span class="lang-en">Commercial Space</span><span class="lang-ru" style="display:none;">Коммерческое пространство</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="progress-card">
-                    <div class="progress-card-icon">🌳</div>
-                    <div class="progress-card-text"><span class="lang-en">Master Plans</span><span class="lang-ru" style="display:none;">Генеральные планы</span></div>
-                </a>
             </div>
         </div>
     </section>
@@ -1514,30 +1203,30 @@
         <div class="container">
             <div class="partners-grid">
                 <div class="partners-text">
-                    <span class="about-tag" style="color: var(--accent);"><span class="lang-en">Networking</span><span class="lang-ru" style="display:none;">Сетевые связи</span></span>
-                    <h2><span class="lang-en">For Developers and Partners</span><span class="lang-ru" style="display:none;">Для разработчиков и партнёров</span></h2>
-                    <p><span class="lang-en">Looking for funding or partnership? We're open to joint ventures in residential, commercial, and industrial real estate.</span><span class="lang-ru" style="display:none;">Ищете финансирование или партнёрство? Мы открыты для совместных предприятий в жилой, коммерческой и промышленной недвижимости.</span></p>
-                    <p><span class="lang-en">Join our closed developer community for experience sharing and resource discovery.</span><span class="lang-ru" style="display:none;">Присоединитесь к нашему закрытому сообществу разработчиков для обмена опытом и поиска ресурсов.</span></p>
-                    <a href="https://t.me/devenvest" class="btn-partners"><span class="lang-en">Join Developer Club</span><span class="lang-ru" style="display:none;">Присоединиться к клубу разработчиков</span></a>
+                    <span class="about-tag" style="color: var(--accent);">Сетевые связи</span>
+                    <h2>Коллегам</h2>
+                    <p>Нужны деньги на проект или партнер с опытом? Давайте работать вместе. У нас есть капитал и команда.</p>
+                    <p>Проводим закрытые встречи - там делимся опытом, обсуждаем проблемы. Присоединяйтесь, если занимаетесь серьезными проектами.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS6CVoDGZi7w4i2uSXSbXcDW25YhXXiP6Ms03OPjp51KP3XA/viewform?usp=publish-editor" class="btn-partners" target="_blank">Предложить сотрудничество</a>
                 </div>
                 <div class="partners-box">
-                    <h3><span class="lang-en">What We Offer</span><span class="lang-ru" style="display:none;">Что мы предлагаем</span></h3>
+                    <h3>Чем можем помочь?</h3>
                     <ul class="partners-list">
                         <li>
                             <span>•</span>
-                            <strong><span class="lang-en">Financing:</span><span class="lang-ru" style="display:none;">Финансирование:</span></strong> <span class="lang-en">Capital for reliable projects.</span><span class="lang-ru" style="display:none;">Капитал для надёжных проектов.</span>
+                            <strong>Деньги: </strong>Найдем инвесторов для вашего проекта, если он стоящий.
                         </li>
                         <li>
                             <span>•</span>
-                            <strong><span class="lang-en">Expertise:</span><span class="lang-ru" style="display:none;">Опыт:</span></strong> <span class="lang-en">Packaging, marketing, and sales.</span><span class="lang-ru" style="display:none;">Упаковка, маркетинг и продажи.</span>
+                            <strong>Опыт: </strong>Поможем упаковать продукт, настроить маркетинг и продажи.
                         </li>
                         <li>
                             <span>•</span>
-                            <strong><span class="lang-en">Masterminds:</span><span class="lang-ru" style="display:none;">Мозговые штабы:</span></strong> <span class="lang-en">Regular live sessions for case reviews.</span><span class="lang-ru" style="display:none;">Регулярные живые сеансы для анализа случаев.</span>
+                            <strong>Общение: </strong>Регулярные встречи для разбора ваших кейсов и мозговых штурмов.
                         </li>
                         <li>
                             <span>•</span>
-                            <strong><span class="lang-en">Network:</span><span class="lang-ru" style="display:none;">Сеть:</span></strong> <span class="lang-en">Vetted contractors, lawyers, architects.</span><span class="lang-ru" style="display:none;">Проверенные подрядчики, адвокаты, архитекторы.</span>
+                            <strong>Связи: </strong>Подключим своих проверенных строителей, юристов, проектировщиков.
                         </li>
                     </ul>
                 </div>
@@ -1545,116 +1234,31 @@
         </div>
     </section>
 
-    <!-- Founders Section (НОВАЯ - ДВА ОСНОВАТЕЛЯ) -->
+    <!-- Founder Section -->
     <section id="founder">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; font-size: 32px; font-weight: 600;">
-                <span class="lang-en">Our Founders</span><span class="lang-ru" style="display:none;">Наши основатели</span>
-            </h2>
-
-            <div class="founders-grid">
-                <!-- Founder 1 -->
-                <div class="founder-grid">
-                    <div class="founder-image">
-                        <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <img src="https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/Для%20резюме.png" alt="Основатель Devenvest" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="founder-content">
+                    <span class="founder-tag">Основатель</span>
+                    <h2>Инвестор и разработчик недвижимости</h2>
+                    <p class="founder-quote">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
+                    <p>20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале</p>
+                    <div class="skills-grid">
+                        <div class="skill-item">Структурирование сделок</div>
+                        <div class="skill-item">Оценка инвестиций</div>
+                        <div class="skill-item">Управление девелопментом</div>
+                        <div class="skill-item">Управление портфелем</div>
                     </div>
-                    <div class="founder-content">
-                        <span class="founder-tag"><span class="lang-en">Founder</span><span class="lang-ru" style="display:none;">Основатель</span></span>
-                        <h2><span class="lang-en">Real Estate Entrepreneur</span><span class="lang-ru" style="display:none;">Предприниматель в сфере недвижимости</span></h2>
-                        <p class="founder-quote"><span class="lang-en">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</span><span class="lang-ru" style="display:none;">"Моя миссия — создавать активы, которые приносят стабильные доходы и обеспечивают инвесторам юридическую защиту, которая часто отсутствует на рынке."</span></p>
-                        <p><span class="lang-en">Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</span><span class="lang-ru" style="display:none;">Управляющий партнёр с более чем 20-летним опытом в недвижимости и инвестициях. Ранее занимал руководящие должности в крупных финансовых компаниях. Ведёт популярный инвестиционный информационный бюллетень с тысячами подписчиков.</span></p>
-                        <div class="skills-grid">
-                            <div class="skill-item"><span class="lang-en">Deal Structuring</span><span class="lang-ru" style="display:none;">Структурирование сделок</span></div>
-                            <div class="skill-item"><span class="lang-en">Development Management</span><span class="lang-ru" style="display:none;">Управление развитием</span></div>
-                            <div class="skill-item"><span class="lang-en">Investment Analysis</span><span class="lang-ru" style="display:none;">Анализ инвестиций</span></div>
-                            <div class="skill-item"><span class="lang-en">Portfolio Management</span><span class="lang-ru" style="display:none;">Управление портфелем</span></div>
-                        </div>
-                        <div class="founder-contact">
-                            <a href="https://t.me/devenvest">
-                                <span class="lang-en">Write in Telegram</span><span class="lang-ru" style="display:none;">Написать в Telegram</span>
-                                <span>→</span>
-                            </a>
-                        </div>
+                    <div class="founder-contact">
+                        <a href="https://t.me/devenvest">
+                            Написать в Telegram
+                            <span>→</span>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Founder 2 -->
-                <div class="founder-grid">
-                    <div class="founder-image">
-                        <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
-                    </div>
-                    <div class="founder-content">
-                        <span class="founder-tag"><span class="lang-en">Founder</span><span class="lang-ru" style="display:none;">Основатель</span></span>
-                        <h2><span class="lang-en">Real Estate Entrepreneur</span><span class="lang-ru" style="display:none;">Предприниматель в сфере недвижимости</span></h2>
-                        <p class="founder-quote"><span class="lang-en">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</span><span class="lang-ru" style="display:none;">"Моя миссия — создавать активы, которые приносят стабильные доходы и обеспечивают инвесторам юридическую защиту, которая часто отсутствует на рынке."</span></p>
-                        <p><span class="lang-en">Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</span><span class="lang-ru" style="display:none;">Управляющий партнёр с более чем 20-летним опытом в недвижимости и инвестициях. Ранее занимал руководящие должности в крупных финансовых компаниях. Ведёт популярный инвестиционный информационный бюллетень с тысячами подписчиков.</span></p>
-                        <div class="skills-grid">
-                            <div class="skill-item"><span class="lang-en">Deal Structuring</span><span class="lang-ru" style="display:none;">Структурирование сделок</span></div>
-                            <div class="skill-item"><span class="lang-en">Development Management</span><span class="lang-ru" style="display:none;">Управление развитием</span></div>
-                            <div class="skill-item"><span class="lang-en">Investment Analysis</span><span class="lang-ru" style="display:none;">Анализ инвестиций</span></div>
-                            <div class="skill-item"><span class="lang-en">Portfolio Management</span><span class="lang-ru" style="display:none;">Управление портфелем</span></div>
-                        </div>
-                        <div class="founder-contact">
-                            <a href="https://t.me/devenvest">
-                                <span class="lang-en">Write in Telegram</span><span class="lang-ru" style="display:none;">Написать в Telegram</span>
-                                <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><span class="lang-en">Founder's Blog</span><span class="lang-ru" style="display:none;">Блог основателя</span></span>
-                <h2 class="section-title"><span class="lang-en">Most Popular Insights</span><span class="lang-ru" style="display:none;">Самые популярные insights</span></h2>
-                <p class="section-desc"><span class="lang-en">Top insights from our investment newsletter. Practical knowledge and case studies from the real estate world.</span><span class="lang-ru" style="display:none;">Лучшие insights из нашего инвестиционного информационного бюллетеня. Практические знания и тематические исследования из мира недвижимости.</span></p>
-            </div>
-            <div class="blog-posts">
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">1</div>
-                    <div class="blog-title"><span class="lang-en">How to Evaluate Real Estate Projects: Complete Framework</span><span class="lang-ru" style="display:none;">Как оценить проекты недвижимости: полная структура</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">2</div>
-                    <div class="blog-title"><span class="lang-en">Why Developers Offer 40% Returns: Financial Model Explained</span><span class="lang-ru" style="display:none;">Почему разработчики предлагают 40% возврата: объяснена финансовая модель</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">3</div>
-                    <div class="blog-title"><span class="lang-en">Passive Income in Real Estate: 5 Common Myths Debunked</span><span class="lang-ru" style="display:none;">Пассивный доход в недвижимости: развенчаны 5 распространённых мифов</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">4</div>
-                    <div class="blog-title"><span class="lang-en">Legal Protection for Investors: What Really Matters</span><span class="lang-ru" style="display:none;">Юридическая защита инвесторов: что действительно важно</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">5</div>
-                    <div class="blog-title"><span class="lang-en">Building a Real Estate Portfolio: Diversification Strategy</span><span class="lang-ru" style="display:none;">Построение портфеля недвижимости: стратегия диверсификации</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">6</div>
-                    <div class="blog-title"><span class="lang-en">Market Cycles and Timing: When to Invest</span><span class="lang-ru" style="display:none;">Рыночные циклы и время: когда инвестировать</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">7</div>
-                    <div class="blog-title"><span class="lang-en">Due Diligence Checklist for Real Estate Deals</span><span class="lang-ru" style="display:none;">Контрольный список тщательной проверки сделок с недвижимостью</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">8</div>
-                    <div class="blog-title"><span class="lang-en">Exit Strategies in Real Estate: Planning Your Exit</span><span class="lang-ru" style="display:none;">Стратегии выхода в недвижимости: планирование вашего выхода</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">9</div>
-                    <div class="blog-title"><span class="lang-en">Risk Management in Collective Investments</span><span class="lang-ru" style="display:none;">Управление рисками в коллективных инвестициях</span></div>
-                </a>
-                <a href="https://t.me/devenvest" target="_blank" class="blog-post">
-                    <div class="blog-number">10</div>
-                    <div class="blog-title"><span class="lang-en">Future of Real Estate: Trends and Opportunities</span><span class="lang-ru" style="display:none;">Будущее недвижимости: тренды и возможности</span></div>
-                </a>
             </div>
         </div>
     </section>
@@ -1668,73 +1272,41 @@
                         <span style="font-size: 24px;">🏢</span>
                         <span class="footer-brand-name">Devenvest</span>
                     </div>
-                    <p class="footer-brand-text"><span class="lang-en">Professional real estate investment platform. Creating reliable and transparent products for investors.</span><span class="lang-ru" style="display:none;">Профессиональная платформа инвестиций в недвижимость. Создание надёжных и прозрачных продуктов для инвесторов.</span></p>
+                    <p class="footer-brand-text">Профессиональная платформа инвестиций в недвижимость. Создание надёжных и прозрачных продуктов для инвесторов.</p>
                 </div>
                 <div class="footer-section">
-                    <h4><span class="lang-en">Navigation</span><span class="lang-ru" style="display:none;">Навигация</span></h4>
+                    <h4>Навигация</h4>
                     <ul class="footer-links">
-                        <li><a href="#about"><span class="lang-en">About Company</span><span class="lang-ru" style="display:none;">О компании</span></a></li>
-                        <li><a href="#trust"><span class="lang-en">Security</span><span class="lang-ru" style="display:none;">Безопасность</span></a></li>
-                        <li><a href="#projects"><span class="lang-en">Projects</span><span class="lang-ru" style="display:none;">Проекты</span></a></li>
-                        <li><a href="#progress"><span class="lang-en">Transparency</span><span class="lang-ru" style="display:none;">Прозрачность</span></a></li>
-                        <li><a href="#partners"><span class="lang-en">Partners</span><span class="lang-ru" style="display:none;">Партнёры</span></a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#trust">Безопасность</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#partners">Партнёрам</a></li>
+                        <li><a href="#founder">Основатель</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4><span class="lang-en">Resources</span><span class="lang-ru" style="display:none;">Ресурсы</span></h4>
+                    <h4>Ресурсы</h4>
                     <ul class="footer-links">
-                        <li><a href="#blog">📚 <span class="lang-en">Blog</span><span class="lang-ru" style="display:none;">Блог</span></a></li>
-                        <li><a href="#founder"><span class="lang-en">About Founders</span><span class="lang-ru" style="display:none;">Об основателях</span></a></li>
+                        <li><a href="https://t.me/devenvest">📢 Telegram канал</a></li>
+                        <li><a href="https://t.me/devenvest">💬 Прямое сообщение</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4><span class="lang-en">Contact</span><span class="lang-ru" style="display:none;">Контакты</span></h4>
+                    <h4>Контакты</h4>
                     <ul class="footer-links">
-                        <li><a href="https://t.me/devenvest">📢 <span class="lang-en">Telegram Channel</span><span class="lang-ru" style="display:none;">Канал Telegram</span></a></li>
-                        <li><a href="https://t.me/devenvest">💬 <span class="lang-en">Direct Message</span><span class="lang-ru" style="display:none;">Прямое сообщение</span></a></li>
-                        <li><a href="mailto:info@devenvest.com">📧 <span class="lang-en">Email</span><span class="lang-ru" style="display:none;">Электронная почта</span></a></li>
+                        <li><a href="https://t.me/devenvest">📩 Telegram</a></li>
+                        <li><a href="mailto:info@devenvest.com">📧 Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Devenvest. <span class="lang-en">All rights reserved.</span><span class="lang-ru" style="display:none;">Все права защищены.</span></p>
-                <span><span class="lang-en">Professional Real Estate Investment Platform</span><span class="lang-ru" style="display:none;">Профессиональная платформа инвестиций в недвижимость</span></span>
+                <p>&copy; 2026 Devenvest. Все права защищены.</p>
+                <span>Профессиональная платформа инвестиций в недвижимость</span>
             </div>
         </div>
     </footer>
 
     <script>
-        // Language Toggle Function
-        function toggleLanguage() {
-            const currentLang = localStorage.getItem('language') || 'en';
-            const newLang = currentLang === 'en' ? 'ru' : 'en';
-            
-            localStorage.setItem('language', newLang);
-            applyLanguage(newLang);
-        }
-
-        function applyLanguage(lang) {
-            const enElements = document.querySelectorAll('.lang-en');
-            const ruElements = document.querySelectorAll('.lang-ru');
-            const langButton = document.querySelector('.lang-toggle');
-
-            if (lang === 'ru') {
-                enElements.forEach(el => el.style.display = 'none');
-                ruElements.forEach(el => el.style.display = 'inline');
-                if (langButton) langButton.textContent = 'RU';
-            } else {
-                enElements.forEach(el => el.style.display = 'inline');
-                ruElements.forEach(el => el.style.display = 'none');
-                if (langButton) langButton.textContent = 'EN';
-            }
-        }
-
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('language') || 'en';
-            applyLanguage(savedLang);
-        });
-
         function toggleMenu() {
             const overlay = document.getElementById('menuOverlay');
             const panel = document.getElementById('menuPanel');
