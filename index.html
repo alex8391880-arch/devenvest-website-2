@@ -527,6 +527,8 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
+            background-size: cover;
+            background-position: center;
         }
 
         .project-image::after {
@@ -721,121 +723,38 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .founder-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 0;
-        }
-
-        .founder-image {
-            position: relative;
-        }
-
-        .founder-image::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(251, 191, 36, 0.1);
-            transform: translate(16px, 16px);
-            border-radius: 8px;
-        }
-
-        .founder-image img {
-            position: relative;
-            width: 100%;
-            border-radius: 8px;
-            filter: grayscale(0);
-            transition: filter 0.3s;
-        }
-
-        .founder-image:hover img {
-            filter: grayscale(0);
-        }
-
-        .founder-content h2 {
-            font-size: 40px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
         .founder-quote {
-            font-size: 18px;
+            font-size: 14px;
             color: var(--text-light);
             font-style: italic;
             border-left: 4px solid var(--accent);
-            padding-left: 24px;
-            margin-bottom: 32px;
-            line-height: 1.8;
-        }
-
-        .founder-content p {
-            color: var(--text-light);
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .founder-tag {
-            color: var(--accent);
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 16px;
+            padding-left: 16px;
+            line-height: 1.6;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 32px;
+            gap: 12px;
+            margin-top: 16px;
         }
 
         .skill-item {
             display: flex;
             align-items: center;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
             color: var(--text);
         }
 
         .skill-item::before {
             content: '';
-            width: 6px;
-            height: 6px;
+            width: 4px;
+            height: 4px;
             background: var(--accent);
             border-radius: 50%;
-            margin-right: 12px;
+            margin-right: 8px;
             flex-shrink: 0;
-        }
-
-        .founder-contact {
-            margin-top: 32px;
-        }
-
-        .founder-contact a {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary);
-            font-weight: 600;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 4px;
-            transition: all 0.3s;
-            font-size: 16px;
-        }
-
-        .founder-contact a:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .founder-contact a span {
-            margin-left: 8px;
         }
 
         /* Footer */
@@ -949,8 +868,7 @@
             }
 
             .about-grid,
-            .partners-grid,
-            .founder-grid {
+            .partners-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
@@ -1139,8 +1057,7 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        🏘️
+                    <div class="project-image" style="background-image: url('ЗАМЕНИТЕ_НА_ССЫЛКЕ_ПРОЕКТА_1');">
                         <div class="project-type">Жилой</div>
                         <div class="project-yield">40%</div>
                     </div>
@@ -1150,15 +1067,15 @@
                         <p class="project-desc">Реконструкция здания гостиницы в жилые квартиры, изменение статуса, оформление документации согласно законодательству Болгарии и последующая продажа со свободного рынка.</p>
                         <div class="project-specs">
                             <div class="spec-row">
-                                <span class="spec-label">Доходность</span>
+                                <span class="spec-label">Доходность: </span>
                                 <span class="spec-value highlight">40% годовых</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label">Минимум</span>
+                                <span class="spec-label">Вход: </span>
                                 <span class="spec-value">€400 000</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label">Период</span>
+                                <span class="spec-label">Срок: </span>
                                 <span class="spec-value">6 месяцев</span>
                             </div>
                         </div>
@@ -1168,8 +1085,7 @@
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        🏢
+                    <div class="project-image" style="background-image: url('ЗАМЕНИТЕ_НА_ССЫЛКЕ_ПРОЕКТА_2');">
                         <div class="project-type">Жилой комплекс</div>
                         <div class="project-yield">75%</div>
                     </div>
@@ -1179,15 +1095,15 @@
                         <p class="project-desc">Строительство современного жилого комплекса в центре Варны. Квартиры с высокой арендной ставкой и потенциалом роста стоимости в динамично развивающемся районе.</p>
                         <div class="project-specs">
                             <div class="spec-row">
-                                <span class="spec-label">Доходность</span>
+                                <span class="spec-label">Доходность: </span>
                                 <span class="spec-value highlight">75% за период</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label">Минимум</span>
+                                <span class="spec-label">Вход: </span>
                                 <span class="spec-value">€500 000</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-label">Период</span>
+                                <span class="spec-label">Срок: </span>
                                 <span class="spec-value">3 года</span>
                             </div>
                         </div>
@@ -1239,28 +1155,41 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Основатели</span>
-                <h2 class="section-title">Наша команда</h2>
             </div>
-            <div class="founder-grid">
+            <div class="projects-grid">
                 <!-- Founder 1 -->
-                <div class="founder-image">
-                    <img src="https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/%D0%94%D0%BB%D1%8F%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5.png" alt="Александр Фанайлов" style="width: 100%; border-radius: 8px;">
-                </div>
-                <div class="founder-content">
-                    <h2>Александр Фанайлов</h2>
-                    <p class="founder-quote">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
-                    <p>20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале</p>
-                    <div class="skills-grid">
-                        <div class="skill-item">Структурирование сделок</div>
-                        <div class="skill-item">Оценка инвестиций</div>
-                        <div class="skill-item">Управление девелопментом</div>
-                        <div class="skill-item">Управление портфелем</div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/%D0%94%D0%BB%D1%8F%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5.png'); height: 300px;">
                     </div>
-                    <div class="founder-contact">
-                        <a href="https://t.me/devenvest">
-                            Написать в Telegram
-                            <span>→</span>
-                        </a>
+                    <div class="project-content">
+                        <h3>Александр Фанайлов</h3>
+                        <p class="founder-quote">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
+                        <p style="font-size: 13px; line-height: 1.6; margin-top: 12px;">20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">Структурирование сделок</div>
+                            <div class="skill-item">Оценка инвестиций</div>
+                            <div class="skill-item">Управление девелопментом</div>
+                            <div class="skill-item">Управление портфелем</div>
+                        </div>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 16px; display: block;">Написать в Telegram</a>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://raw.githubusercontent.com/alex8391880-arch/devenvest-website-2/main/%D0%94%D0%BB%D1%8F%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5.png'); height: 300px;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Александр Фанайлов</h3>
+                        <p class="founder-quote">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
+                        <p style="font-size: 13px; line-height: 1.6; margin-top: 12px;">20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">Структурирование сделок</div>
+                            <div class="skill-item">Оценка инвестиций</div>
+                            <div class="skill-item">Управление девелопментом</div>
+                            <div class="skill-item">Управление портфелем</div>
+                        </div>
+                        <a href="https://t.me/devenvest" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 16px; display: block;">Написать в Telegram</a>
                     </div>
                 </div>
             </div>
