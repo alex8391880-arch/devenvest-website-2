@@ -84,15 +84,31 @@
         .logo-link {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 24px;
+            gap: 8px;
+            font-size: 20px;
             font-weight: 600;
             color: var(--primary);
             transition: color 0.3s;
+            padding-left: 8px;
         }
 
         .logo-link:hover {
             color: var(--secondary);
+        }
+
+        .site-logo {
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+
+        .footer-brand-logo img {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            vertical-align: middle;
         }
 
         .nav-menu {
@@ -981,7 +997,7 @@
             <div class="nav-content">
                 <div class="nav-flex">
                     <a href="#" class="logo-link">
-                        <span>🏢</span>
+                        <img src="assets/logo.svg" alt="Devenvest" class="site-logo">
                         <span>Devenvest</span>
                     </a>
                     <nav class="nav-menu">
@@ -1274,7 +1290,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-brand-logo">
-                        <span style="font-size: 24px;">🏢</span>
+                        <img src="assets/logo.svg" alt="Devenvest" />
                         <span class="footer-brand-name">Devenvest</span>
                     </div>
                     <p class="footer-brand-text">Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнеров.</p>
