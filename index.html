@@ -183,13 +183,17 @@
             display: flex;
         }
 
-        /* Hero Section */
+        /* Hero Section - СВЕТЛО-СЕРЫЙ ОДНОТОННЫЙ ФОНОВ */
         .hero-pattern {
             position: relative;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: #f5f5f7 !important;
             overflow: hidden;
             padding: 120px 24px;
-            color: var(--white);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-pattern::before {
@@ -231,6 +235,7 @@
             font-weight: 600;
             margin-bottom: 24px;
             line-height: 1.2;
+            color: var(--primary);
         }
 
         .hero-title .highlight {
@@ -246,6 +251,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: var(--text-light);
         }
 
         .btn-group {
@@ -276,13 +282,13 @@
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            border: 2px solid var(--white);
+            background: rgba(15, 23, 42, 0.1);
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(15, 23, 42, 0.2);
         }
 
         /* Sections */
@@ -757,6 +763,13 @@
         #founder {
             background: var(--white);
             border-bottom: 1px solid var(--border);
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
         }
 
         .founder-grid {
@@ -1532,29 +1545,61 @@
         </div>
     </section>
 
-    <!-- Founder Section -->
+    <!-- Founders Section (НОВАЯ - ДВА ОСНОВАТЕЛЯ) -->
     <section id="founder">
         <div class="container">
-            <div class="founder-grid">
-                <div class="founder-image">
-                    <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
-                </div>
-                <div class="founder-content">
-                    <span class="founder-tag"><span class="lang-en">Founder</span><span class="lang-ru" style="display:none;">Основатель</span></span>
-                    <h2><span class="lang-en">Real Estate Entrepreneur</span><span class="lang-ru" style="display:none;">Предприниматель в сфере недвижимости</span></h2>
-                    <p class="founder-quote"><span class="lang-en">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</span><span class="lang-ru" style="display:none;">"Моя миссия — создавать активы, которые приносят стабильные доходы и обеспечивают инвесторам юридическую защиту, которая часто отсутствует на рынке."</span></p>
-                    <p><span class="lang-en">Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</span><span class="lang-ru" style="display:none;">Управляющий партнёр с более чем 20-летним опытом в недвижимости и инвестициях. Ранее занимал руководящие должности в крупных финансовых компаниях. Ведёт популярный инвестиционный информационный бюллетень с тысячами подписчиков.</span></p>
-                    <div class="skills-grid">
-                        <div class="skill-item"><span class="lang-en">Deal Structuring</span><span class="lang-ru" style="display:none;">Структурирование сделок</span></div>
-                        <div class="skill-item"><span class="lang-en">Development Management</span><span class="lang-ru" style="display:none;">Управление развитием</span></div>
-                        <div class="skill-item"><span class="lang-en">Investment Analysis</span><span class="lang-ru" style="display:none;">Анализ инвестиций</span></div>
-                        <div class="skill-item"><span class="lang-en">Portfolio Management</span><span class="lang-ru" style="display:none;">Управление портфелем</span></div>
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 32px; font-weight: 600;">
+                <span class="lang-en">Our Founders</span><span class="lang-ru" style="display:none;">Наши основатели</span>
+            </h2>
+
+            <div class="founders-grid">
+                <!-- Founder 1 -->
+                <div class="founder-grid">
+                    <div class="founder-image">
+                        <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
                     </div>
-                    <div class="founder-contact">
-                        <a href="https://t.me/devenvest">
-                            <span class="lang-en">Write in Telegram</span><span class="lang-ru" style="display:none;">Написать в Telegram</span>
-                            <span>→</span>
-                        </a>
+                    <div class="founder-content">
+                        <span class="founder-tag"><span class="lang-en">Founder</span><span class="lang-ru" style="display:none;">Основатель</span></span>
+                        <h2><span class="lang-en">Real Estate Entrepreneur</span><span class="lang-ru" style="display:none;">Предприниматель в сфере недвижимости</span></h2>
+                        <p class="founder-quote"><span class="lang-en">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</span><span class="lang-ru" style="display:none;">"Моя миссия — создавать активы, которые приносят стабильные доходы и обеспечивают инвесторам юридическую защиту, которая часто отсутствует на рынке."</span></p>
+                        <p><span class="lang-en">Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</span><span class="lang-ru" style="display:none;">Управляющий партнёр с более чем 20-летним опытом в недвижимости и инвестициях. Ранее занимал руководящие должности в крупных финансовых компаниях. Ведёт популярный инвестиционный информационный бюллетень с тысячами подписчиков.</span></p>
+                        <div class="skills-grid">
+                            <div class="skill-item"><span class="lang-en">Deal Structuring</span><span class="lang-ru" style="display:none;">Структурирование сделок</span></div>
+                            <div class="skill-item"><span class="lang-en">Development Management</span><span class="lang-ru" style="display:none;">Управление развитием</span></div>
+                            <div class="skill-item"><span class="lang-en">Investment Analysis</span><span class="lang-ru" style="display:none;">Анализ инвестиций</span></div>
+                            <div class="skill-item"><span class="lang-en">Portfolio Management</span><span class="lang-ru" style="display:none;">Управление портфелем</span></div>
+                        </div>
+                        <div class="founder-contact">
+                            <a href="https://t.me/devenvest">
+                                <span class="lang-en">Write in Telegram</span><span class="lang-ru" style="display:none;">Написать в Telegram</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="founder-grid">
+                    <div class="founder-image">
+                        <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--white);">👨‍💼</div>
+                    </div>
+                    <div class="founder-content">
+                        <span class="founder-tag"><span class="lang-en">Founder</span><span class="lang-ru" style="display:none;">Основатель</span></span>
+                        <h2><span class="lang-en">Real Estate Entrepreneur</span><span class="lang-ru" style="display:none;">Предприниматель в сфере недвижимости</span></h2>
+                        <p class="founder-quote"><span class="lang-en">"My mission is to create assets that deliver consistent returns and provide investors with legal protection that's often missing in the market."</span><span class="lang-ru" style="display:none;">"Моя миссия — создавать активы, которые приносят стабильные доходы и обеспечивают инвесторам юридическую защиту, которая часто отсутствует на рынке."</span></p>
+                        <p><span class="lang-en">Managing partner with 20+ years in real estate and investments. Previously held leadership roles in major financial companies. Runs a popular investment newsletter with thousands of subscribers.</span><span class="lang-ru" style="display:none;">Управляющий партнёр с более чем 20-летним опытом в недвижимости и инвестициях. Ранее занимал руководящие должности в крупных финансовых компаниях. Ведёт популярный инвестиционный информационный бюллетень с тысячами подписчиков.</span></p>
+                        <div class="skills-grid">
+                            <div class="skill-item"><span class="lang-en">Deal Structuring</span><span class="lang-ru" style="display:none;">Структурирование сделок</span></div>
+                            <div class="skill-item"><span class="lang-en">Development Management</span><span class="lang-ru" style="display:none;">Управление развитием</span></div>
+                            <div class="skill-item"><span class="lang-en">Investment Analysis</span><span class="lang-ru" style="display:none;">Анализ инвестиций</span></div>
+                            <div class="skill-item"><span class="lang-en">Portfolio Management</span><span class="lang-ru" style="display:none;">Управление портфелем</span></div>
+                        </div>
+                        <div class="founder-contact">
+                            <a href="https://t.me/devenvest">
+                                <span class="lang-en">Write in Telegram</span><span class="lang-ru" style="display:none;">Написать в Telegram</span>
+                                <span>→</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1639,7 +1684,7 @@
                     <h4><span class="lang-en">Resources</span><span class="lang-ru" style="display:none;">Ресурсы</span></h4>
                     <ul class="footer-links">
                         <li><a href="#blog">📚 <span class="lang-en">Blog</span><span class="lang-ru" style="display:none;">Блог</span></a></li>
-                        <li><a href="#founder"><span class="lang-en">About Founder</span><span class="lang-ru" style="display:none;">Об основателе</span></a></li>
+                        <li><a href="#founder"><span class="lang-en">About Founders</span><span class="lang-ru" style="display:none;">Об основателях</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
