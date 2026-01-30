@@ -740,7 +740,7 @@
 
         .founder-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
             align-items: flex-start;
             margin-top: 60px;
@@ -748,16 +748,15 @@
 
         .founder-card {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 32px;
+            flex-direction: column;
         }
 
         .founder-image-wrapper {
-            flex: 0 0 40%;
+            width: 100%;
             height: auto;
             border-radius: 8px;
             overflow: hidden;
+            margin-bottom: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -950,15 +949,6 @@
             .founder-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
-
-            .founder-card {
-                flex-direction: column;
-            }
-
-            .founder-image-wrapper {
-                width: 100%;
-                margin-bottom: 32px;
             }
 
             .trust-grid {
