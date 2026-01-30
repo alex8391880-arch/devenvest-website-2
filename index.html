@@ -542,12 +542,10 @@
         .project-image {
             width: 100%;
             aspect-ratio: 1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--surface);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 64px;
-            color: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -573,8 +571,7 @@
         }
 
         .project-emoji {
-            position: relative;
-            z-index: 0;
+            display: none;
         }
 
         .project-type {
