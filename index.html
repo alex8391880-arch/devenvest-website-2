@@ -142,6 +142,24 @@
             background: var(--secondary);
         }
 
+        .lang-toggle {
+            background: transparent;
+            color: var(--primary);
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -998,12 +1016,13 @@
                         <span>Devenvest</span>
                     </a>
                     <nav class="nav-menu">
-                        <a href="#about" class="nav-link">О компании</a>
-                        <a href="#trust" class="nav-link">Безопасность</a>
-                        <a href="#projects" class="nav-link">Проекты</a>
-                        <a href="#partners" class="nav-link">Партнёрам</a>
-                        <a href="#founder" class="nav-link">Основатели</a>
+                        <a href="#about" class="nav-link" data-ru="О компании" data-en="About">О компании</a>
+                        <a href="#trust" class="nav-link" data-ru="Безопасность" data-en="Security">Безопасность</a>
+                        <a href="#projects" class="nav-link" data-ru="Проекты" data-en="Projects">Проекты</a>
+                        <a href="#partners" class="nav-link" data-ru="Партнёрам" data-en="Partners">Партнёрам</a>
+                        <a href="#founder" class="nav-link" data-ru="Основатели" data-en="Founders">Основатели</a>
                     </nav>
+                    <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">EN</button>
                 </div>
                 <button class="hamburger" onclick="toggleMenu()">
                     <span></span>
@@ -1022,26 +1041,27 @@
             <button onclick="toggleMenu()" style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
         </div>
         <nav style="flex-grow: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
-            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">О компании</a>
-            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Безопасность</a>
-            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Проекты</a>
-            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Партнёрам</a>
-            <a href="#founder" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;">Основатели</a>
+            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="О компании" data-en="About">О компании</a>
+            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Безопасность" data-en="Security">Безопасность</a>
+            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Проекты" data-en="Projects">Проекты</a>
+            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Партнёрам" data-en="Partners">Партнёрам</a>
+            <a href="#founder" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Основатели" data-en="Founders">Основатели</a>
+            <button class="lang-toggle" onclick="toggleLanguage()" style="width: 100%; margin-top: 20px;" id="langBtnMobile">EN</button>
         </nav>
         <div style="padding: 32px; border-top: 1px solid var(--border);">
-            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;">Telegram Канал</a>
+            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;" data-ru="Telegram Канал" data-en="Telegram Channel">Telegram Канал</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero-pattern">
         <div class="hero-content">
-            <div class="hero-badge">Коллективные инвестиции</div>
-            <h1 class="hero-title">Инвестиции в <span class="highlight">прибыльные активы</span> с опытным партнером</h1>
-            <p class="hero-subtitle">Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции</p>
+            <div class="hero-badge" data-ru="Коллективные инвестиции" data-en="Collective Investments">Коллективные инвестиции</div>
+            <h1 class="hero-title"><span data-ru="Инвестиции в" data-en="Investing in">Инвестиции в</span> <span class="highlight" data-ru="прибыльные активы" data-en="profitable assets">прибыльные активы</span> <span data-ru="с опытным партнером" data-en="with an experienced partner">с опытным партнером</span></h1>
+            <p class="hero-subtitle" data-ru="Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции" data-en="Access to large projects with small investments. Capital diversification and legal protection of each investment">Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции</p>
             <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">Посмотреть проекты</a>
-                <a href="https://t.me/Alejandrov2000" class="btn btn-secondary">Написать в Telegram</a>
+                <a href="#projects" class="btn btn-primary" data-ru="Посмотреть проекты" data-en="View Projects">Посмотреть проекты</a>
+                <a href="https://t.me/Alejandrov2000" class="btn btn-secondary" data-ru="Написать в Telegram" data-en="Write to Telegram">Написать в Telegram</a>
             </div>
         </div>
     </section>
@@ -1051,42 +1071,42 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <span class="about-tag">О компании</span>
-                    <h2>Когда частные деньги встречают большие проекты</h2>
-                    <p>Мы не очередная "инвестиционная компания". Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации</p>
-                    <p>Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств.</p>
+                    <span class="about-tag" data-ru="О компании" data-en="About Us">О компании</span>
+                    <h2 data-ru="Когда частные деньги встречают большие проекты" data-en="When private capital meets major projects">Когда частные деньги встречают большие проекты</h2>
+                    <p data-ru="Мы не очередная &quot;инвестиционная компания&quot;. Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации" data-en="We're not just another 'investment company'. We're the guys who actually take on projects ourselves, not just connect people. We personally participate at every stage: from finding the property to its realization">Мы не очередная "инвестиционная компания". Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации</p>
+                    <p data-ru="Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств." data-en="We help private investors access deals that were previously available only to major players. We do redevelopment of existing buildings, build new ones, develop cottage villages, reconstruct hotels, flip individual properties, including with our own capital.">Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств.</p>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value">10+ млн €</div>
-                            <div class="stat-label">Инвестировано</div>
+                            <div class="stat-label" data-ru="Инвестировано" data-en="Invested">Инвестировано</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">20+ лет</div>
-                            <div class="stat-label">Опыта команды</div>
+                            <div class="stat-value" data-ru="20+ лет" data-en="20+ years">20+ лет</div>
+                            <div class="stat-label" data-ru="Опыта команды" data-en="Team Experience">Опыта команды</div>
                         </div>
                     </div>
                 </div>
                 <div class="principles-box">
-                    <h3>Наши принципы</h3>
+                    <h3 data-ru="Наши принципы" data-en="Our Principles">Наши принципы</h3>
                     <div class="principle-item">
                         <div class="principle-icon">🏗️</div>
                         <div class="principle-content">
-                            <strong>Только бетон и земля</strong>
-                            <span>Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы.</span>
+                            <strong data-ru="Только бетон и земля" data-en="Only Concrete and Land">Только бетон и земля</strong>
+                            <span data-ru="Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы." data-en="No stocks, crypto, or other virtual assets. Only what you can touch and what will survive any crisis.">Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы.</span>
                         </div>
                     </div>
                     <div class="principle-item">
                         <div class="principle-icon">🔍</div>
                         <div class="principle-content">
-                            <strong>Сами проверяем всё</strong>
-                            <span>Не полагаемся на "экспертов". Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев.</span>
+                            <strong data-ru="Сами проверяем всё" data-en="We Verify Everything Ourselves">Сами проверяем всё</strong>
+                            <span data-ru="Не полагаемся на &quot;экспертов&quot;. Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев." data-en="We don't rely on 'experts'. We personally inspect properties, verify documents, calculate financial models. We know each project inside out.">Не полагаемся на "экспертов". Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев.</span>
                         </div>
                     </div>
                     <div class="principle-item">
                         <div class="principle-icon">🤝</div>
                         <div class="principle-content">
-                            <strong>Наши деньги там же, где и ваши</strong>
-                            <span>Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски.</span>
+                            <strong data-ru="Наши деньги там же, где и ваши" data-en="Our Money is Where Yours Is">Наши деньги там же, где и ваши</strong>
+                            <span data-ru="Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски." data-en="We invest together with you. We share both profits and risks.">Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски.</span>
                         </div>
                     </div>
                 </div>
@@ -1098,25 +1118,25 @@
     <section id="trust">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Безопасность</span>
-                <h2 class="section-title">Как защищены ваши инвестиции?</h2>
-                <p class="section-desc">Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций.</p>
+                <span class="section-tag" data-ru="Безопасность" data-en="Security">Безопасность</span>
+                <h2 class="section-title" data-ru="Как защищены ваши инвестиции?" data-en="How are your investments protected?">Как защищены ваши инвестиции?</h2>
+                <p class="section-desc" data-ru="Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций." data-en="We use transparent collateral management in accordance with international standards. This is the market standard for protecting collective investments.">Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций.</p>
             </div>
             <div class="trust-grid">
                 <div class="trust-card">
                     <div class="trust-icon">🔐</div>
-                    <h3>Реальный залог</h3>
-                    <p>Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций.</p>
+                    <h3 data-ru="Реальный залог" data-en="Real Collateral">Реальный залог</h3>
+                    <p data-ru="Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций." data-en="Every euro is secured by a liquid asset (land or buildings) worth more than the investment amount.">Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций.</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">🛡️</div>
-                    <h3>Защита активов</h3>
-                    <p>Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства).</p>
+                    <h3 data-ru="Защита активов" data-en="Asset Protection">Защита активов</h3>
+                    <p data-ru="Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства)." data-en="Assets under collateral management are segregated. They cannot be seized for the manager's personal debts (bankruptcy protection).">Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства).</p>
                 </div>
                 <div class="trust-card">
                     <div class="trust-icon">📄</div>
-                    <h3>Всё зарегистрировано</h3>
-                    <p>Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции.</p>
+                    <h3 data-ru="Всё зарегистрировано" data-en="Everything is Registered">Всё зарегистрировано</h3>
+                    <p data-ru="Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции." data-en="Collateral is officially registered. Each investor receives documents confirming their investment rights.">Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции.</p>
                 </div>
             </div>
         </div>
