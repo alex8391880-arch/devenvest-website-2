@@ -521,7 +521,7 @@
 
         .project-image {
             width: 100%;
-            height: auto;
+            aspect-ratio: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
@@ -530,13 +530,12 @@
             color: var(--white);
             position: relative;
             overflow: hidden;
-            min-height: 240px;
         }
 
         .project-image img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
             position: relative;
             z-index: 2;
             display: block;
@@ -1149,7 +1148,7 @@
                     <div class="project-image">
                         <img src="assets/clubhuose.jpg" alt="Клубный дом" onerror="this.style.display='none'">
                         <span class="project-emoji">🏘️</span>
-                        <div class="project-type">Жилой</div>
+                        <div class="project-type">Редевелопмент/Квартиры</div>
                         <div class="project-yield">40%</div>
                     </div>
                     <div class="project-content">
@@ -1179,7 +1178,7 @@
                     <div class="project-image">
                         <img src="assets/Varna.jpg" alt="Жилой комплекс Варна" onerror="this.style.display='none'">
                         <span class="project-emoji">🏢</span>
-                        <div class="project-type">Жилой комплекс</div>
+                        <div class="project-type">Строительство/Жилой комплекс</div>
                         <div class="project-yield">75%</div>
                     </div>
                     <div class="project-content">
