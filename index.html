@@ -748,15 +748,16 @@
 
         .founder-card {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 32px;
         }
 
         .founder-image-wrapper {
-            width: 100%;
+            flex: 0 0 36%;
             height: auto;
             border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -949,6 +950,15 @@
             .founder-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .founder-card {
+                flex-direction: column;
+            }
+
+            .founder-image-wrapper {
+                width: 100%;
+                margin-bottom: 32px;
             }
 
             .trust-grid {
