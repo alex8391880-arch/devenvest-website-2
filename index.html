@@ -143,10 +143,10 @@
         }
 
         .lang-toggle {
-            background: transparent;
+            background: var(--accent);
             color: var(--primary);
             padding: 8px 16px;
-            border: 2px solid var(--primary);
+            border: 2px solid var(--accent);
             border-radius: 6px;
             font-weight: 600;
             font-size: 14px;
@@ -156,8 +156,10 @@
         }
 
         .lang-toggle:hover {
-            background: var(--primary);
+            background: #f59e0b;
             color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
         }
 
         .hamburger {
