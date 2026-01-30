@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenvest - Жилой комплекс «Варна»</title>
+    <meta name="description" content="Проект Жилой комплекс Варна - строительство современного жилого комплекса.">
+    <meta name="author" content="Devenvest">
+    <link rel="canonical" href="https://devenvest.com/project2.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e3a8a;
+            --accent: #f59e0b;
+            --surface: #f8fafc;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .project-detail {
+            padding: 80px 0;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .project-header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-info h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        .project-info p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .project-specs {
+            background: var(--surface);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .spec-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .spec-label {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .spec-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .spec-value.highlight {
+            color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e5a00a;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="project-detail">
+            <a href="index.html" class="back-link">&larr; Назад к проектам</a>
+            <div class="project-header">
+                <h1>Жилой комплекс «Варна»</h1>
+                <p>Варна, Болгария</p>
+            </div>
+            <div class="project-content">
+                <div class="project-image">
+                    <img src="assets/project2.jpg" alt="Жилой комплекс Варна">
+                </div>
+                <div class="project-info">
+                    <h2>Описание проекта</h2>
+                    <p>Строительство современного жилого комплекса в центре Варны. Квартиры с высокой арендной ставкой и потенциалом роста стоимости в динамично развивающемся районе.</p>
+                    <p>Комплекс расположен в центральной части Варны, с отличной транспортной доступностью и развитой инфраструктурой. Проект включает современные квартиры с панорамными видами на море.</p>
+                    <div class="project-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Доходность:</span>
+                            <span class="spec-value highlight">75% за период</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Минимальный вход:</span>
+                            <span class="spec-value">€500 000</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Срок реализации:</span>
+                            <span class="spec-value">3 года</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Тип объекта:</span>
+                            <span class="spec-value">Жилой комплекс</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Статус:</span>
+                            <span class="spec-value">В разработке</span>
+                        </div>
+                    </div>
+                    <a href="https://t.me/devenvest" class="btn" style="margin-top: 32px;">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
