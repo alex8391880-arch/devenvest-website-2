@@ -85,7 +85,7 @@
         .logo-link {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             font-size: 30px;
             font-weight: 600;
             color: var(--primary);
@@ -98,11 +98,15 @@
         }
 
         .site-logo {
-            display: none;
+            height: 50px;
+            width: auto;
+            display: block;
         }
 
         .footer-brand-logo img {
-            display: none;
+            height: 45px;
+            width: auto;
+            display: block;
         }
 
         .nav-menu {
@@ -1010,7 +1014,7 @@
             <div class="nav-content">
                 <div class="nav-flex">
                     <a href="#" class="logo-link">
-                        <img src="assets/logo_2.png" alt="Devenvest" class="site-logo">
+                        <img src="assets/logo.png" alt="Devenvest" class="site-logo">
                         <span>Devenvest</span>
                     </a>
                     <nav class="nav-menu">
@@ -1035,7 +1039,10 @@
     <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
     <div class="mobile-menu-panel" id="menuPanel">
         <div style="padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-size: 18px; font-weight: 600; color: var(--primary);">🏢 Devenvest</div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="assets/logo.png" alt="Devenvest" style="height: 35px; width: auto;">
+                <span style="font-size: 18px; font-weight: 600; color: var(--primary);">Devenvest</span>
+            </div>
             <button onclick="toggleMenu()" style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
         </div>
         <nav style="flex-grow: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
@@ -1286,7 +1293,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-brand-logo">
-                        <img src="assets/logo_2.png" alt="Devenvest" />
+                        <img src="assets/logo.png" alt="Devenvest" />
                         <span class="footer-brand-name">Devenvest</span>
                     </div>
                     <p class="footer-brand-text" data-ru="Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнеров." data-en="We invest in real estate and development. Making investments clear and reliable for our partners.">Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнеров.</p>
