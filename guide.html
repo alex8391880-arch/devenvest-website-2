@@ -338,7 +338,7 @@
                 <button type="submit" class="btn">Скачать PDF бесплатно</button>
 
                 <div class="success-message" id="successMessage">
-                    ✓ Спасибо! Чек-лист отправлен на ваш email. Проверьте входящие письма.
+                    ✓ Спасибо! Скачивание PDF началось автоматически. Проверьте папку "Загрузки".
                 </div>
             </form>
         </div>
@@ -363,6 +363,15 @@
                 if (response.ok) {
                     document.getElementById('successMessage').classList.add('show');
                     form.reset();
+                    
+                    // Автоматическое скачивание PDF
+                    const link = document.createElement('a');
+                    link.href = 'assets/Чек-лист покупки земли в Болгарии - Devenvest.pdf';
+                    link.download = 'Чек-лист покупки земли в Болгарии - Devenvest.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
                     console.log('Lead captured:', { source: 'guide-checklist' });
                 } else {
                     alert('Произошла ошибка при отправке. Попробуйте еще раз.');
