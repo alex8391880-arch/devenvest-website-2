@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бесплатный аудит капитала - Devenvest</title>
+    <link rel="icon" href="assets/logo fenix bro.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #191435;
+            --secondary: #2a1f4d;
+            --accent: #BFAC8C;
+            --surface: #f8fafc;
+            --text: #191435;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--surface);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 24px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .logo-link:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .benefits-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .benefits-title {
+            font-size: 28px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, #d4bd96 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .benefit-content h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: var(--primary);
+        }
+
+        .benefit-content p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        .form-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-title {
+            font-size: 28px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .required {
+            color: #ef4444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            color: var(--text);
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(191, 172, 140, 0.1);
+        }
+
+        select {
+            cursor: pointer;
+            background: var(--white);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #d4bd96;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(191, 172, 140, 0.4);
+        }
+
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-message h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .success-message p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            text-align: center;
+        }
+
+        .badge-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .badge-text {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .privacy-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .form-section,
+            .benefits-section,
+            .hero-section {
+                padding: 30px 24px;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">Devenvest</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="hero-title">Бесплатный аудит капитала</h1>
+            <p class="hero-subtitle">Подберём проекты под вашу сумму за 24 часа</p>
+            <p class="hero-description">Персональная подборка инвестиционных возможностей с расчётом доходности</p>
+        </div>
+
+        <div class="benefits-section">
+            <h2 class="benefits-title">Что вы получите</h2>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-content">
+                    <h3>Анализ капитала</h3>
+                    <p>Оценим ваши возможности и подберём оптимальную стратегию инвестирования</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                    <h3>Персональную подборку</h3>
+                    <p>3-5 проектов, точно соответствующих вашему бюджету и целям</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-content">
+                    <h3>Расчёт доходности</h3>
+                    <p>Прогноз прибыли для каждого проекта с учётом ваших инвестиций</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">⚖️</div>
+                <div class="benefit-content">
+                    <h3>Юридическую проверку</h3>
+                    <p>Все проекты проверены нашими юристами и застрахованы</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2 class="form-title">Заполните форму</h2>
+            
+            <form id="auditForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Иван" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Телефон или Telegram <span class="required">*</span></label>
+                    <input type="text" id="contact" name="contact" placeholder="+359 ... или @username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Сумма для инвестирования (€) <span class="required">*</span></label>
+                    <select id="amount" name="amount" required>
+                        <option value="">Выберите диапазон</option>
+                        <option value="10000-25000">10,000 - 25,000 €</option>
+                        <option value="25000-50000">25,000 - 50,000 €</option>
+                        <option value="50000-100000">50,000 - 100,000 €</option>
+                        <option value="100000-250000">100,000 - 250,000 €</option>
+                        <option value="250000+">250,000+ €</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Получить подборку бесплатно</button>
+
+                <p class="privacy-note">🔒 Ваши данные защищены и не передаются третьим лицам</p>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <h3>✓ Заявка принята!</h3>
+                <p>Мы свяжемся с вами в течение 24 часов с персональной подборкой проектов</p>
+                <p style="margin-top: 12px; font-size: 14px;">Проверьте указанные контакты для связи</p>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="badge">
+                <div class="badge-number">24ч</div>
+                <div class="badge-text">Время ответа</div>
+            </div>
+            <div class="badge">
+                <div class="badge-number">500+</div>
+                <div class="badge-text">Довольных клиентов</div>
+            </div>
+            <div class="badge">
+                <div class="badge-number">30%</div>
+                <div class="badge-text">Средняя доходность</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const amount = document.getElementById('amount').value;
+            
+            // Send to your CRM or backend
+            console.log('Audit lead captured:', { 
+                name, 
+                contact, 
+                amount, 
+                source: 'audit-page',
+                timestamp: new Date().toISOString()
+            });
+            
+            // Here you would typically send this data to your backend/CRM
+            // Example: fetch('/api/leads', { method: 'POST', body: JSON.stringify(data) })
+            
+            // Hide form and show success message
+            document.getElementById('auditForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Optional: Send to Facebook Pixel, Google Analytics, etc.
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Capital Audit',
+                    value: amount,
+                    currency: 'EUR'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
