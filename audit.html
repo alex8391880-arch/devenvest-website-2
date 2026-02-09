@@ -355,7 +355,11 @@
         <div class="form-section">
             <h2 class="form-title">Заполните форму</h2>
             
-            <form id="auditForm">
+            <form id="auditForm" action="https://formspree.io/f/xanyglqy" method="POST">
+                <input type="hidden" name="_subject" value="Новая заявка: Аудит капитала">
+                <input type="hidden" name="_cc" value="contact@devenvest.com">
+                <input type="hidden" name="page" value="audit">
+                
                 <div class="form-group">
                     <label for="name">Ваше имя <span class="required">*</span></label>
                     <input type="text" id="name" name="name" placeholder="Иван" required>
@@ -407,39 +411,42 @@
     </div>
 
     <script>
-        document.getElementById('auditForm').addEventListener('submit', function(e) {
+        document.getElementById('auditForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const contact = document.getElementById('contact').value;
-            const amount = document.getElementById('amount').value;
+            const form = e.target;
+            const formData = new FormData(form);
             
-            // Send to your CRM or backend
-            console.log('Audit lead captured:', { 
-                name, 
-                contact, 
-                amount, 
-                source: 'audit-page',
-                timestamp: new Date().toISOString()
-            });
-            
-            // Here you would typically send this data to your backend/CRM
-            // Example: fetch('/api/leads', { method: 'POST', body: JSON.stringify(data) })
-            
-            // Hide form and show success message
-            document.getElementById('auditForm').style.display = 'none';
-            document.getElementById('successMessage').classList.add('show');
-            
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Optional: Send to Facebook Pixel, Google Analytics, etc.
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_name: 'Capital Audit',
-                    value: amount,
-                    currency: 'EUR'
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
+                
+                if (response.ok) {
+                    // Hide form and show success message
+                    form.style.display = 'none';
+                    document.getElementById('successMessage').classList.add('show');
+                    
+                    // Scroll to success message
+                    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Optional: Send to Facebook Pixel, Google Analytics, etc.
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {
+                            content_name: 'Capital Audit',
+                            currency: 'EUR'
+                        });
+                    }
+                } else {
+                    alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+                }
+            } catch (error) {
+                alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+                console.error('Error:', error);
             }
         });
     </script>
