@@ -424,28 +424,27 @@
     </div>
 
     <script>
-        document.getElementById('auditForm').addEventListener('submit', async function(e) {
+        document.getElementById('auditForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const form = e.target;
             const formData = new FormData(form);
             
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
+            // Сразу показываем успешное сообщение
+            form.style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Отправляем форму в фоне
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
                 if (response.ok) {
-                    // Hide form and show success message
-                    form.style.display = 'none';
-                    document.getElementById('successMessage').classList.add('show');
-                    
-                    // Scroll to success message
-                    document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    console.log('Lead captured:', { source: 'capital-audit' });
                     
                     // Optional: Send to Facebook Pixel, Google Analytics, etc.
                     if (typeof fbq !== 'undefined') {
@@ -455,12 +454,11 @@
                         });
                     }
                 } else {
-                    alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+                    console.error('Form submission failed');
                 }
-            } catch (error) {
-                alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+            }).catch(error => {
                 console.error('Error:', error);
-            }
+            });
         });
     </script>
 </body>
