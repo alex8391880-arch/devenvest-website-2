@@ -338,7 +338,7 @@
                 <button type="submit" class="btn">Скачать PDF бесплатно</button>
 
                 <div class="success-message" id="successMessage">
-                    ✓ Спасибо! Скачивание PDF началось автоматически. Проверьте папку "Загрузки".
+                    ✓ Спасибо! PDF открыт в новой вкладке. Сохраните его на ваше устройство.
                 </div>
             </form>
         </div>
@@ -364,15 +364,9 @@
                     document.getElementById('successMessage').classList.add('show');
                     form.reset();
                     
-                    // Автоматическое скачивание PDF
+                    // Открытие PDF в новой вкладке
                     setTimeout(() => {
-                        const link = document.createElement('a');
-                        link.href = 'assets/checklist-zemli-bulgaria.pdf';
-                        link.download = 'Чек-лист покупки земли в Болгарии - Devenvest.pdf';
-                        link.target = '_blank';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
+                        window.open('assets/checklist-zemli-bulgaria.pdf', '_blank');
                     }, 500);
                     
                     console.log('Lead captured:', { source: 'guide-checklist' });
