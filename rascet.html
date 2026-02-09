@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор доходности - Devenvest</title>
+    <link rel="icon" href="assets/logo fenix bro.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #191435;
+            --secondary: #2a1f4d;
+            --accent: #BFAC8C;
+            --surface: #f8fafc;
+            --text: #191435;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--surface);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 24px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .logo-link:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .calculator-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .currency-symbol {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 16px 16px 16px 40px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(191, 172, 140, 0.1);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #d4bd96;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(191, 172, 140, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--primary);
+            color: var(--white);
+            margin-top: 16px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary);
+            box-shadow: 0 8px 20px rgba(25, 20, 53, 0.3);
+        }
+
+        .results-section {
+            display: none;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+            color: var(--white);
+            animation: slideIn 0.5s ease;
+        }
+
+        .results-section.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results-title {
+            font-size: 24px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+        }
+
+        .results-main {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .results-details {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .info-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .disclaimer {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .calculator-card,
+            .hero-section {
+                padding: 30px 24px;
+            }
+
+            .results-main {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">Devenvest</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="hero-title">Расчёт доходности вашего инвестирования</h1>
+            <p class="hero-subtitle">Узнайте потенциальную прибыль от инвестиций в недвижимость</p>
+        </div>
+
+        <div class="calculator-card">
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="amount">Сумма инвестиций (€)</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">€</span>
+                        <input type="number" id="amount" name="amount" min="1000" step="1000" placeholder="50000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="period">Горизонт инвестирования (месяцев)</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">📅</span>
+                        <input type="number" id="period" name="period" min="1" max="120" placeholder="12" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Рассчитать доходность</button>
+            </form>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <h2 class="results-title">Ваш потенциальный доход</h2>
+            <div class="results-main" id="profit">+0 €</div>
+            <div class="results-details" id="details">При доходности 30% годовых</div>
+
+            <div class="info-box">
+                <h3>Что входит в доходность:</h3>
+                <ul>
+                    <li>Рост стоимости недвижимости</li>
+                    <li>Доход от аренды или перепродажи</li>
+                    <li>Участие в крупных проектах</li>
+                    <li>Юридическая защита капитала</li>
+                </ul>
+            </div>
+
+            <button class="btn btn-secondary" onclick="openConsultation()">Записаться на разбор</button>
+        </div>
+
+        <div class="disclaimer">
+            <p><strong>Важно:</strong> Расчёт является ориентировочным. Реальная доходность зависит от выбранного проекта, рыночных условий и срока инвестирования. Инвестиции в недвижимость связаны с рисками.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const amount = parseFloat(document.getElementById('amount').value);
+            const period = parseInt(document.getElementById('period').value);
+            
+            // Calculate with 30% annual return
+            const annualRate = 0.30;
+            const monthlyRate = annualRate / 12;
+            const profit = amount * monthlyRate * period;
+            const totalAmount = amount + profit;
+            
+            // Display results
+            document.getElementById('profit').textContent = '+' + profit.toLocaleString('ru-RU', { maximumFractionDigits: 0 }) + ' €';
+            document.getElementById('details').textContent = `При 30% годовых: ${profit.toLocaleString('ru-RU', { maximumFractionDigits: 0 })} € за ${period} ${getPeriodText(period)}`;
+            
+            // Show results section
+            document.getElementById('resultsSection').classList.add('show');
+            
+            // Scroll to results
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Log for CRM integration
+            console.log('Calculator used:', { amount, period, profit, source: 'rascet-calculator' });
+        });
+
+        function getPeriodText(months) {
+            if (months === 1) return 'месяц';
+            if (months >= 2 && months <= 4) return 'месяца';
+            return 'месяцев';
+        }
+
+        function openConsultation() {
+            // Redirect to consultation or open modal
+            // For now, link to WhatsApp or Telegram
+            const message = encodeURIComponent('Здравствуйте! Хочу записаться на разбор инвестиционной стратегии.');
+            window.open('https://wa.me/359876543210?text=' + message, '_blank');
+            // Or you can redirect to a contact form
+            // window.location.href = 'index.html#contact';
+        }
+    </script>
+</body>
+</html>
