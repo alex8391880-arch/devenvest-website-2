@@ -53,13 +53,23 @@
         }
 
         .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 24px;
             font-weight: 600;
             color: var(--primary);
+            text-decoration: none;
         }
 
         .logo-link:hover {
             color: var(--accent);
+        }
+
+        .site-logo {
+            height: 50px;
+            width: auto;
+            display: block;
         }
 
         .container {
@@ -209,9 +219,9 @@
         }
 
         .btn:hover {
-            background: #d4bd96;
+            background: #f59e0b;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(191, 172, 140, 0.4);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
         }
 
         .success-message {
@@ -305,7 +315,10 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo-link">Devenvest</a>
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo fenix 2.png" alt="Devenvest" class="site-logo">
+                <span>DEVENVEST</span>
+            </a>
         </div>
     </header>
 
