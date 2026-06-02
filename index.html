@@ -1,2190 +1,1430 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <title>DEVENVEST - инвестиции в недвижимость и девелопмент в Болгарии</title>
-    <meta name="description"
-        content="DEVENVEST — инвестиции в недвижимость и девелопмент в Болгарии. Безопасные сделки, прозрачные расчеты и профессиональное управление проектами.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo fenix 2.png">
-
+    <title>Devenvest - Инвестиции в недвижимость</title>
+    <link rel="icon" href="assets/logo fenix bro.jpg" type="image/jpeg">
+    <meta name="description"
+        content="Инвестиции в прибыльные активы с опытным партнером. Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита.">
+    <meta name="author" content="Devenvest">
+    <link rel="canonical" href="https://devenvest.com">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devenvest.com">
+    <meta property="og:title" content="Devenvest - Инвестиции в недвижимость">
+    <meta property="og:description" content="Вход в большие проекты с малым чеком. Юридическая защита каждой инвестиции.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #05070a;
-            --bg-elevated: rgba(9, 12, 18, 0.96);
-            --bg-soft: rgba(13, 18, 30, 0.85);
-            --bg-soft-alt: rgba(7, 11, 22, 0.9);
-            --bg-softer: rgba(13, 18, 30, 0.8);
-            --bg-hero: radial-gradient(circle at 0% 0%, rgba(32, 99, 155, 0.25) 0, transparent 50%),
-                radial-gradient(circle at 100% 0%, rgba(236, 142, 66, 0.2) 0, transparent 45%),
-                radial-gradient(circle at 50% 100%, rgba(44, 181, 145, 0.18) 0, transparent 50%),
-                radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08) 0, transparent 55%),
-                linear-gradient(145deg, #05070a 0%, #05070a 60%, #05070a 100%);
-            --border-subtle: rgba(255, 255, 255, 0.06);
-            --border-strong: rgba(255, 255, 255, 0.14);
-            --border-soft: rgba(255, 255, 255, 0.03);
-            --text: #f7f7f7;
-            --muted: rgba(235, 235, 245, 0.68);
-            --muted-soft: rgba(235, 235, 245, 0.52);
-            --muted-softer: rgba(235, 235, 245, 0.38);
-            --accent: #f1a34f;
-            --accent-soft: rgba(241, 163, 79, 0.18);
-            --accent-strong: #ffb654;
-            --accent-secondary: #1f9c7f;
-            --accent-secondary-soft: rgba(31, 156, 127, 0.16);
-            --accent-deep: #f37a3b;
-            --accent-blue: #5293e0;
-            --accent-blue-soft: rgba(82, 147, 224, 0.2);
-            --danger: #ff5b5b;
-            --danger-soft: rgba(255, 91, 91, 0.22);
-            --success: #48cf8a;
-            --success-soft: rgba(72, 207, 138, 0.2);
-            --gradient-accent: linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654, #f1a34f);
-            --gradient-soft: linear-gradient(135deg, rgba(241, 163, 79, 0.06), rgba(82, 147, 224, 0.04));
-            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(241, 163, 79, 0.08));
-            --gradient-border: linear-gradient(145deg, rgba(241, 163, 79, 0.8), rgba(82, 147, 224, 0.8));
-            --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.75);
-            --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.58);
-            --shadow-subtle: 0 12px 35px rgba(0, 0, 0, 0.45);
-            --radius-base: 14px;
-            --radius-lg: 22px;
-            --radius-xl: 28px;
-            --radius-pill: 999px;
-            --radius-card: 26px;
-            --blur: 28px;
-        }
-
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #191435;
+            --secondary: #2a1f4d;
+            --accent: #BFAC8C;
+            --surface: #f8fafc;
+            --text: #191435;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
         body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-            background: radial-gradient(circle at 0% 0%, rgba(32, 99, 155, 0.22) 0, transparent 45%),
-                radial-gradient(circle at 100% 0%, rgba(236, 142, 66, 0.18) 0, transparent 45%),
-                radial-gradient(circle at 50% 100%, rgba(44, 181, 145, 0.15) 0, transparent 50%),
-                #05070a;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
             color: var(--text);
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
+            background: var(--white);
+            font-size: 16px;
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at 0% 0%, rgba(241, 163, 79, 0.06) 0, transparent 50%),
-                radial-gradient(circle at 100% 0%, rgba(82, 147, 224, 0.08) 0, transparent 50%),
-                radial-gradient(circle at 50% 100%, rgba(31, 156, 127, 0.06) 0, transparent 55%);
-            opacity: 1;
-            pointer-events: none;
-            z-index: -1;
+        h1, h2, h3, h4, h5, h6,
+        .hero-title,
+        .section-title,
+        .about-text h2,
+        .partners-text h2,
+        .trust-card h3,
+        .project-content h3,
+        .founder-content h3,
+        .principles-box h3,
+        .partners-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
         }
 
-        main {
-            position: relative;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        .page-wrapper {
-            position: relative;
-            z-index: 1;
+        button {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
-        .page-wrapper::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.16) 0, transparent 65%);
-            mix-blend-mode: soft-light;
-            opacity: 0.55;
-            pointer-events: none;
-            z-index: -1;
+        /* Header Navigation */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .container {
-            max-width: 1120px;
+        .nav-container {
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(22px);
-            background: radial-gradient(circle at 0% 0%, rgba(82, 147, 224, 0.1) 0, transparent 40%),
-                radial-gradient(circle at 100% 0%, rgba(241, 163, 79, 0.16) 0, transparent 45%),
-                linear-gradient(to bottom, rgba(5, 7, 10, 0.86), rgba(5, 7, 10, 0.93));
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
         }
 
-        .nav {
+        .nav-flex {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 24px 14px;
-            gap: 24px;
+            width: 100%;
+            gap: 40px;
         }
 
-        .nav-left {
+        .logo-link {
             display: flex;
             align-items: center;
-            gap: 14px;
-        }
-
-        .logo {
-            width: 36px;
-            height: 36px;
-            border-radius: 14px;
-            background:
-                radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.4) 0, transparent 35%),
-                radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.32) 0, transparent 40%),
-                radial-gradient(circle at 50% 120%, rgba(255, 167, 81, 0.7) 0, transparent 65%),
-                conic-gradient(from 200deg at 50% 50%,
-                    #ffb654,
-                    #f37a3b,
-                    #f1a34f,
-                    #5293e0,
-                    #2cb591,
-                    #ffb654);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow:
-                0 0 0 1px rgba(249, 177, 97, 0.7),
-                0 10px 25px rgba(0, 0, 0, 0.7);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo::before {
-            content: "";
-            position: absolute;
-            inset: 3px;
-            border-radius: 11px;
-            background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.45) 0, transparent 42%),
-                radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.22) 0, transparent 45%),
-                linear-gradient(140deg, rgba(5, 7, 10, 0.1), rgba(5, 7, 10, 0.85));
-            mix-blend-mode: screen;
-            opacity: 0.9;
-        }
-
-        .logo-inner {
-            position: relative;
-            z-index: 1;
-            font-size: 18px;
-            letter-spacing: 0.25em;
+            gap: 4px;
+            font-size: 26px;
             font-weight: 600;
-            color: #05070a;
-            text-shadow:
-                0 0 19px rgba(255, 255, 255, 0.7),
-                0 0 35px rgba(241, 163, 79, 0.9);
+            color: var(--primary);
+            transition: color 0.3s;
+            padding-left: 0;
+            line-height: 1;
         }
 
-        .logo-inner span {
-            display: inline-block;
-            transform: translateY(1px);
+        .logo-link:hover {
+            color: var(--secondary);
         }
 
-        .brand-name {
-            font-weight: 650;
-            letter-spacing: 0.32em;
-            font-size: 13px;
-            text-transform: uppercase;
-            color: #f7f7f7;
-        }
-
-        .brand-subtitle {
-            font-size: 11px;
-            color: var(--muted-softer);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .nav-center {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            padding: 4px 12px;
-            border-radius: 999px;
-            background: linear-gradient(120deg, rgba(255, 255, 255, 0.05), rgba(241, 163, 79, 0.08));
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
-        }
-
-        .nav-center::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 1px;
-            background: linear-gradient(120deg, rgba(113, 154, 236, 0.5), rgba(241, 163, 79, 0.6),
-                    rgba(44, 181, 145, 0.4));
-            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0.14;
-            pointer-events: none;
-        }
-
-        .nav-center-inner {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        .nav-link {
-            color: var(--muted-soft);
-            text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 9px 12px;
-            border-radius: 999px;
-            position: relative;
-            transition: all 0.2s ease-out;
-        }
-
-        .nav-link::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: radial-gradient(circle at 50% 0, rgba(241, 163, 79, 0.25) 0, transparent 55%);
-            opacity: 0;
-            transition: opacity 0.2s ease-out;
-        }
-
-        .nav-link span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .nav-link:hover {
-            color: #fff;
-        }
-
-        .nav-link:hover::before {
-            opacity: 1;
-        }
-
-        .nav-link-active {
-            color: #fff;
-        }
-
-        .nav-link-active::before {
-            opacity: 1;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .lang-toggle {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            color: var(--muted-soft);
-            padding: 6px 14px;
-            font-size: 12px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .lang-toggle::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: linear-gradient(120deg, rgba(241, 163, 79, 0.12), rgba(82, 147, 224, 0.25));
-            opacity: 0;
-            transition: opacity 0.18s ease-out;
-        }
-
-        .lang-toggle span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .lang-toggle:hover::before {
-            opacity: 1;
-        }
-
-        .nav-cta {
-            background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.45) 0, transparent 45%),
-                linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654);
-            border-radius: 999px;
-            border: 0;
-            color: #05070a;
-            padding: 8px 18px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow:
-                0 12px 30px rgba(0, 0, 0, 0.7),
-                0 0 50px rgba(241, 163, 79, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-cta::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.35), transparent);
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-
-        .nav-cta:hover::before {
-            opacity: 1;
-            transform: translateX(100%);
-            transition: transform 0.6s ease-out, opacity 0.2s ease-out;
-        }
-
-        .nav-cta-icon {
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            transform: translateY(-0.5px);
-        }
-
-        .nav-toggle {
-            display: none;
-            background: transparent;
-            border: 0;
-            padding: 6px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-
-        .nav-toggle span {
+        .site-logo {
+            height: 74px;
+            width: auto;
             display: block;
-            width: 16px;
-            height: 2px;
-            margin: 3px 0;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.85);
         }
 
-        .hero {
-            padding: 32px 0 56px;
-            background: var(--bg-hero);
-            position: relative;
-            overflow: hidden;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        .footer-brand-logo img {
+            height: 64px;
+            width: auto;
+            display: block;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: -120px;
-            background:
-                radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.08) 0, transparent 55%),
-                radial-gradient(circle at 85% 0%, rgba(82, 147, 224, 0.3) 0, transparent 60%),
-                radial-gradient(circle at 50% 105%, rgba(241, 163, 79, 0.3) 0, transparent 60%);
-            mix-blend-mode: screen;
-            opacity: 0.85;
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.07) 0, transparent 55%);
-            mix-blend-mode: screen;
-            opacity: 1;
-            pointer-events: none;
-        }
-
-        .hero-inner {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.1fr);
-            gap: 42px;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 6px 12px 6px 6px;
-            border-radius: 999px;
-            background: rgba(9, 12, 18, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.8);
-            position: relative;
-            margin-bottom: 18px;
-            backdrop-filter: blur(16px);
-        }
-
-        .hero-badge-glow {
-            width: 24px;
-            height: 24px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.8) 0, transparent 45%),
-                radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.4) 0, transparent 45%),
-                radial-gradient(circle at 50% 120%, rgba(241, 163, 79, 0.9) 0, transparent 65%);
-            box-shadow:
-                0 0 28px rgba(241, 163, 79, 0.9),
-                0 0 60px rgba(82, 147, 224, 0.7);
-            position: relative;
-        }
-
-        .hero-badge-content {
+        .nav-menu {
             display: flex;
-            flex-direction: column;
-            gap: 1px;
-        }
-
-        .hero-badge-title {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .hero-badge-subtitle {
-            font-size: 11px;
-            color: rgba(235, 235, 245, 0.8);
-        }
-
-        .hero-title {
-            font-size: 34px;
-            line-height: 1.25;
-            letter-spacing: 0.02em;
-            margin: 0 0 10px;
-            max-width: 550px;
-            text-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
-        }
-
-        .hero-highlight {
-            background: linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--muted);
-            margin: 0 0 20px;
-            max-width: 520px;
-        }
-
-        .hero-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin: 0 0 22px;
-            padding: 0;
+            gap: 40px;
+            align-items: center;
             list-style: none;
         }
 
-        .hero-list li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: var(--muted-soft);
+        .nav-link {
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .hero-list-bullet {
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            background: rgba(31, 156, 127, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--success);
-            font-size: 12px;
+        .nav-link:hover {
+            color: var(--accent);
         }
 
-        .hero-cta-row {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
-
-        .hero-cta-primary {
-            background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.45) 0, transparent 50%),
-                linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654);
-            border-radius: 999px;
-            border: 0;
-            padding: 11px 22px;
-            font-size: 13px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            font-weight: 650;
-            color: #05070a;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow:
-                0 12px 32px rgba(0, 0, 0, 0.8),
-                0 0 52px rgba(241, 163, 79, 0.6);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-cta-primary::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.45), transparent);
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-
-        .hero-cta-primary:hover::before {
-            opacity: 1;
-            transform: translateX(100%);
-            transition: transform 0.7s ease-out, opacity 0.2s ease-out;
-        }
-
-        .hero-cta-secondary {
-            background: rgba(5, 7, 10, 0.65);
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 9px 16px;
-            font-size: 12px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--muted);
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(14px);
-        }
-
-        .hero-cta-secondary-icon {
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            background: rgba(82, 147, 224, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            font-size: 12px;
-        }
-
-        .hero-footnote {
-            font-size: 11px;
-            color: var(--muted-softer);
-        }
-
-        .hero-metrics {
-            display: flex;
-            gap: 18px;
-            margin-top: 18px;
-        }
-
-        .metric {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .metric-value {
-            font-size: 18px;
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 6px;
             font-weight: 600;
+            transition: background 0.3s;
+            display: inline-block;
         }
 
-        .metric-label {
-            font-size: 11px;
-            color: var(--muted-soft);
+        .nav-btn:hover {
+            background: var(--secondary);
         }
 
-        .hero-right {
+        .lang-toggle {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border: 2px solid var(--accent);
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .lang-toggle:hover {
+            background: #f59e0b;
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+
+        .mobile-menu-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 101;
+            overflow-y: auto;
+            flex-direction: column;
+        }
+
+        .mobile-menu-overlay.active,
+        .mobile-menu-panel.active {
+            display: flex;
+        }
+
+        /* Hero Section */
+        .hero-pattern {
             position: relative;
-        }
-
-        .hero-right-inner {
-            background: radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.26) 0, transparent 48%),
-                radial-gradient(circle at 90% 0%, rgba(82, 147, 224, 0.45) 0, transparent 55%),
-                radial-gradient(circle at 50% 105%, rgba(241, 163, 79, 0.35) 0, transparent 65%),
-                linear-gradient(150deg, rgba(6, 9, 16, 0.95), rgba(5, 7, 10, 0.98));
-            border-radius: var(--radius-card);
-            padding: 18px 18px 18px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow:
-                0 26px 80px rgba(0, 0, 0, 0.8),
-                0 0 72px rgba(241, 163, 79, 0.25);
-            position: relative;
+            background: #f5f5f7;
             overflow: hidden;
+            padding: 120px 24px;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero-right-inner::before {
-            content: "";
+        .hero-pattern::before {
+            content: '';
             position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.18) 0, transparent 45%),
-                radial-gradient(circle at 90% 0%, rgba(82, 147, 224, 0.3) 0, transparent 55%);
-            mix-blend-mode: soft-light;
-            opacity: 0.85;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
             pointer-events: none;
         }
 
-        .hero-plan-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
+        .hero-content {
+            max-width: 800px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            text-align: center;
         }
 
-        .hero-plan-badge {
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            font-size: 10px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--muted-soft);
-        }
-
-        .hero-plan-tagline {
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .hero-plan-main {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-            gap: 16px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-plan-metric {
-            background: rgba(5, 7, 10, 0.7);
+        .hero-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: var(--accent);
+            padding: 8px 16px;
             border-radius: 20px;
-            padding: 12px 12px 11px;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-        }
-
-        .hero-plan-topline {
-            font-size: 11px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--muted-soft);
-            margin-bottom: 4px;
-        }
-
-        .hero-plan-value {
-            font-size: 19px;
-            font-weight: 650;
-        }
-
-        .hero-plan-comment {
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .hero-plan-details {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-        }
-
-        .hero-plan-detail-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .hero-plan-detail-marker {
-            width: 16px;
-            height: 16px;
-            border-radius: 999px;
-            background: rgba(31, 156, 127, 0.16);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--success);
-            font-size: 11px;
-        }
-
-        .hero-plan-footer {
-            margin-top: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-plan-progress {
-            flex: 1;
-            height: 6px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-        }
-
-        .hero-plan-progress-fill {
-            width: 72%;
-            height: 100%;
-            border-radius: inherit;
-            background: linear-gradient(90deg, var(--accent-secondary), var(--accent), var(--accent-blue));
-            box-shadow: 0 0 16px rgba(241, 163, 79, 0.7);
-        }
-
-        .hero-plan-status {
-            font-size: 11px;
-            color: var(--muted-soft);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .hero-plan-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 999px;
-            background: var(--success);
-            box-shadow: 0 0 10px rgba(72, 207, 138, 0.8);
-        }
-
-        .hero-mini-card-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-mini-card {
-            padding: 10px 10px 9px;
-            border-radius: 14px;
-            background: rgba(5, 7, 10, 0.72);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .hero-mini-card-title {
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .hero-mini-card-value {
             font-size: 13px;
             font-weight: 600;
-        }
-
-        .hero-mini-card-tag {
-            font-size: 10px;
-            color: var(--muted-softer);
-        }
-
-        .hero-floating-tag {
-            position: absolute;
-            top: -12px;
-            right: 8px;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            font-size: 10px;
-            letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--muted-soft);
+            letter-spacing: 1px;
+            margin-bottom: 24px;
         }
 
-        .hero-floating-stat {
-            position: absolute;
-            bottom: -18px;
-            left: 18px;
-            padding: 10px 12px;
-            border-radius: 18px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            font-size: 11px;
-            color: var(--muted-soft);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.8);
-        }
-
-        .hero-floating-stat-value {
+        .hero-title {
+            font-size: 48px;
             font-weight: 600;
-            color: #fff;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            color: var(--primary);
         }
 
-        .hero-floating-stat-dot {
-            width: 16px;
-            height: 16px;
-            border-radius: 999px;
-            background: rgba(82, 147, 224, 0.25);
+        .hero-title .highlight {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 32px;
+            color: var(--text-light);
+        }
+
+        .btn-group {
             display: flex;
-            align-items: center;
+            gap: 16px;
             justify-content: center;
-            color: var(--accent-blue);
-            font-size: 11px;
+            flex-wrap: wrap;
         }
 
-        .hero-partners {
-            margin-top: 32px;
-            padding: 12px 14px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            font-size: 11px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--muted-soft);
-            backdrop-filter: blur(18px);
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
         }
 
-        .hero-partners-pill {
-            padding: 5px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            font-size: 10px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(245, 245, 245, 0.85);
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
         }
 
-        .hero-partners-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .btn-primary:hover {
+            background: #f59e0b;
+            transform: translateY(-2px);
         }
 
-        .hero-partners-logo span {
-            font-size: 10px;
-            color: var(--muted-softer);
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.1);
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
+        .btn-secondary:hover {
+            background: rgba(15, 23, 42, 0.2);
+        }
+
+        /* Sections */
         section {
-            padding: 60px 0 60px;
-            position: relative;
+            padding: 80px 24px;
         }
 
-        section::before {
-            content: "";
-            position: absolute;
-            inset: 0 0 auto;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.14), transparent);
-            opacity: 0.45;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .section-header {
-            margin-bottom: 20px;
-            position: relative;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .section-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 5px 12px 5px 6px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            font-size: 11px;
-            letter-spacing: 0.16em;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
             text-transform: uppercase;
-            color: var(--muted-soft);
-        }
-
-        .section-tag::before {
-            content: "";
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85) 0, transparent 50%),
-                radial-gradient(circle at 70% 20%, rgba(241, 163, 79, 0.8) 0, transparent 55%);
-            box-shadow:
-                0 0 22px rgba(241, 163, 79, 0.9),
-                0 0 28px rgba(82, 147, 224, 0.6);
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 16px;
         }
 
         .section-title {
-            font-size: 24px;
-            margin: 10px 0 8px;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
-        .section-subtitle {
-            font-size: 14px;
-            color: var(--muted-soft);
-            max-width: 540px;
+        .section-desc {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
+        /* About Section */
         #about {
-            background: radial-gradient(circle at 0% -20%, rgba(82, 147, 224, 0.18) 0, transparent 55%),
-                radial-gradient(circle at 100% 120%, rgba(241, 163, 79, 0.18) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-            gap: 36px;
-            align-items: flex-start;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
         .about-text h2 {
-            font-size: 22px;
-            margin: 8px 0 10px;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
+            line-height: 1.3;
         }
 
         .about-text p {
-            font-size: 14px;
-            color: var(--muted-soft);
-            margin: 0 0 16px;
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .about-tag {
-            font-size: 11px;
-            letter-spacing: 0.16em;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
             text-transform: uppercase;
-            color: var(--muted-soft);
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 16px;
         }
 
-        .about-stats {
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 14px;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
         }
 
-        .stat-card {
-            padding: 12px 12px 11px;
-            border-radius: 16px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.16);
+        .stat-item {
+            padding-left: 20px;
+            border-left: 4px solid var(--accent);
         }
 
         .stat-value {
-            font-size: 18px;
+            font-size: 32px;
             font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .about-points {
-            margin-top: 18px;
-            padding: 12px 12px 11px;
-            border-radius: 16px;
-            background: rgba(5, 7, 10, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-        }
-
-        .about-points-title {
             font-size: 12px;
-            letter-spacing: 0.16em;
+            color: var(--text-light);
             text-transform: uppercase;
-            color: var(--muted-soft);
+            letter-spacing: 0.5px;
+        }
+
+        .principles-box {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .principles-box h3 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 32px;
+        }
+
+        .principle-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .principle-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .principle-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .principle-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .principle-content strong {
+            display: block;
+            color: var(--primary);
+            font-size: 16px;
             margin-bottom: 6px;
         }
 
-        .about-points-list {
-            font-size: 13px;
-            color: var(--muted-soft);
+        .principle-content {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
         }
 
-        .about-points-list li {
-            margin-bottom: 4px;
-        }
-
-        .about-image-card {
-            border-radius: 20px;
-            overflow: hidden;
-            background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.16) 0, transparent 55%),
-                linear-gradient(135deg, rgba(6, 9, 16, 0.9), rgba(5, 7, 10, 0.95));
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow:
-                0 24px 70px rgba(0, 0, 0, 0.85),
-                0 0 60px rgba(82, 147, 224, 0.4);
-            position: relative;
-        }
-
-        .about-image {
-            aspect-ratio: 4/3;
-            width: 100%;
-            object-fit: cover;
-            opacity: 0.95;
-        }
-
-        .about-image-overlay {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 0% 50%, rgba(5, 7, 10, 0.7) 0, transparent 55%),
-                linear-gradient(to top, rgba(5, 7, 10, 0.85), transparent 50%);
-        }
-
-        .about-image-caption {
-            position: absolute;
-            left: 14px;
-            right: 14px;
-            bottom: 12px;
-            color: #fff;
-            font-size: 12px;
-        }
-
-        .about-image-caption span {
-            display: block;
-            color: var(--muted-soft);
-        }
-
+        /* Trust Section */
         #trust {
-            background: radial-gradient(circle at 0% 0%, rgba(82, 147, 224, 0.18) 0, transparent 55%),
-                radial-gradient(circle at 100% 50%, rgba(241, 163, 79, 0.16) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
         }
 
         .trust-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
-            align-items: flex-start;
+            margin-top: 60px;
         }
 
         .trust-card {
-            background: rgba(5, 7, 10, 0.9);
-            border-radius: 20px;
-            padding: 16px 16px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 18px 54px rgba(0, 0, 0, 0.82);
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
         }
 
-        .trust-card-title {
-            font-size: 14px;
-            margin: 0 0 8px;
+        .trust-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
         }
 
-        .trust-card-text {
-            font-size: 13px;
-            color: var(--muted-soft);
-            margin: 0;
-        }
-
-        .trust-list {
-            margin: 14px 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .trust-list li {
-            font-size: 13px;
-            color: var(--muted-soft);
-            margin-bottom: 6px;
-        }
-
-        .shield-card {
-            background: radial-gradient(circle at 0% 0%, rgba(241, 163, 79, 0.25) 0, transparent 55%),
-                radial-gradient(circle at 100% 0%, rgba(82, 147, 224, 0.35) 0, transparent 55%),
-                rgba(5, 7, 10, 0.95);
-            border-radius: 20px;
-            padding: 16px 16px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow:
-                0 22px 65px rgba(0, 0, 0, 0.85),
-                0 0 60px rgba(82, 147, 224, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .shield-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85) 0, transparent 50%),
-                radial-gradient(circle at 70% 20%, rgba(241, 163, 79, 0.8) 0, transparent 55%);
-            margin-bottom: 10px;
+        .trust-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow:
-                0 0 26px rgba(241, 163, 79, 0.9),
-                0 0 30px rgba(82, 147, 224, 0.7);
         }
 
-        .shield-icon span {
-            color: #05070a;
-            font-size: 18px;
+        .trust-icon img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
         }
 
-        .shield-title {
-            font-size: 15px;
-            margin: 0 0 6px;
+        .trust-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
         }
 
-        .shield-text {
-            font-size: 13px;
-            color: var(--muted-soft);
+        .trust-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
         }
 
-        .shield-badges {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .shield-badge {
-            padding: 5px 9px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.7);
-            font-size: 11px;
-            color: var(--muted-soft);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
+        /* Projects Section */
         #projects {
-            background: radial-gradient(circle at 0% 0%, rgba(241, 163, 79, 0.18) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
-        }
-
-        .projects-tabs {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 18px;
-            flex-wrap: wrap;
-        }
-
-        .projects-tab {
-            padding: 7px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            background: rgba(5, 7, 10, 0.9);
-            font-size: 12px;
-            color: var(--muted-soft);
-            cursor: pointer;
-        }
-
-        .projects-tab-active {
-            background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.45) 0, transparent 50%),
-                linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654);
-            color: #05070a;
-            border-color: transparent;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 20px;
-            align-items: stretch;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 60px;
         }
 
         .project-card {
-            padding: 14px 14px 13px;
-            border-radius: 18px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.82);
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .project-title {
-            font-size: 14px;
-            margin: 0 0 6px;
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
         }
 
-        .project-subtitle {
-            font-size: 12px;
-            color: var(--muted-soft);
-            margin: 0 0 10px;
+        .project-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .project-metrics {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .project-metric {
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        .project-metric span {
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
             display: block;
-            font-size: 13px;
-            color: #fff;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .project-emoji {
+            display: none;
+        }
+
+        .project-type {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
             font-weight: 600;
+            text-transform: uppercase;
+            color: var(--primary);
+            z-index: 3;
         }
 
-        .project-notes {
+        .project-yield {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 3;
+        }
+
+        .project-content {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .project-location {
             font-size: 12px;
-            color: var(--muted-soft);
-            margin: 0;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
         }
 
-        .project-side-card {
-            padding: 14px 14px 13px;
-            border-radius: 18px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+        .project-desc {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            flex-grow: 1;
         }
 
+        .project-specs {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .spec-label {
+            color: var(--text-light);
+        }
+
+        .spec-label::after {
+            content: ' : ';
+        }
+
+        .spec-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .spec-value.highlight {
+            color: var(--accent);
+            font-size: 14px;
+        }
+
+        /* Partners Section */
         #partners {
-            background: radial-gradient(circle at 100% 0%, rgba(82, 147, 224, 0.18) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
+            background: var(--primary);
+            color: var(--white);
         }
 
         .partners-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 24px;
-            align-items: flex-start;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        .partners-card {
-            padding: 14px 14px 13px;
-            border-radius: 18px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.82);
+        .partners-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.3;
         }
 
-        .partners-roles {
+        .partners-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .partners-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .partners-box h3 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .partners-list {
+            list-style: none;
+        }
+
+        .partners-list li {
             display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
-        .partners-role {
-            padding: 5px 9px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.7);
-            font-size: 11px;
-            color: var(--muted-soft);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+        .partners-list li:last-child {
+            margin-bottom: 0;
         }
 
-        .partners-cta {
-            margin-top: 12px;
-            padding: 10px 12px;
-            border-radius: 16px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px dashed rgba(255, 255, 255, 0.28);
-            font-size: 12px;
-            color: var(--muted-soft);
+        .partners-list span:first-child {
+            color: var(--accent);
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
-        .partners-benefits {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
+        .btn-partners {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: all 0.3s;
         }
 
-        .partners-benefit {
-            padding: 10px 10px 9px;
-            border-radius: 14px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            font-size: 12px;
-            color: var(--muted-soft);
+        .btn-partners:hover {
+            background: #f59e0b;
         }
 
+        /* Founder Section */
         #founder {
-            background: radial-gradient(circle at 0% 0%, rgba(241, 163, 79, 0.16) 0, transparent 55%),
-                radial-gradient(circle at 100% 100%, rgba(82, 147, 224, 0.18) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
         }
 
         .founder-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .founder-grid-single {
-            justify-content: center;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: flex-start;
+            margin-top: 60px;
         }
 
         .founder-card {
-            padding: 20px;
-            border-radius: 24px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85);
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-            align-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 32px;
         }
 
         .founder-image-wrapper {
-            border-radius: 20px;
-            overflow: hidden;
-            background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.16) 0, transparent 55%),
-                linear-gradient(135deg, rgba(6, 9, 16, 0.9), rgba(5, 7, 10, 0.95));
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow:
-                0 24px 70px rgba(0, 0, 0, 0.85),
-                0 0 60px rgba(82, 147, 224, 0.4);
-            position: relative;
-            aspect-ratio: 3 / 4;
+            flex: 0 0 36%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
         }
 
         .founder-image-wrapper img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
 
         .founder-content h3 {
-            font-size: 18px;
-            margin: 0 0 8px;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 24px;
         }
 
         .founder-quote {
-            font-size: 14px;
-            color: var(--muted-soft);
-            margin: 0 0 10px;
+            font-size: 16px;
+            color: var(--text-light);
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
 
         .founder-bio {
-            font-size: 13px;
-            color: var(--muted-soft);
-            margin: 0 0 12px;
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 28px;
         }
 
         .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 28px;
         }
 
         .skill-item {
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(5, 7, 10, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            font-size: 11px;
-            color: var(--muted-soft);
-        }
-
-        #cta {
-            background: radial-gradient(circle at 0% 0%, rgba(82, 147, 224, 0.18) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
-        }
-
-        .cta-card {
-            padding: 18px 18px 16px;
-            border-radius: 22px;
-            background: radial-gradient(circle at 0% 0%, rgba(241, 163, 79, 0.2) 0, transparent 55%),
-                radial-gradient(circle at 100% 0%, rgba(82, 147, 224, 0.3) 0, transparent 55%),
-                rgba(5, 7, 10, 0.96);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow:
-                0 22px 65px rgba(0, 0, 0, 0.85),
-                0 0 60px rgba(82, 147, 224, 0.5);
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .cta-title {
-            font-size: 18px;
-            margin: 0 0 4px;
-        }
-
-        .cta-text {
-            font-size: 13px;
-            color: var(--muted-soft);
-            margin: 0;
-        }
-
-        .cta-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 6px;
-        }
-
-        .cta-primary {
-            background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.45) 0, transparent 50%),
-                linear-gradient(120deg, #f1a34f, #f37a3b, #ffb654);
-            border-radius: 999px;
-            border: 0;
-            padding: 11px 22px;
-            font-size: 13px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            font-weight: 650;
-            color: #05070a;
-            cursor: pointer;
-            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow:
-                0 12px 32px rgba(0, 0, 0, 0.8),
-                0 0 52px rgba(241, 163, 79, 0.6);
-            position: relative;
-            overflow: hidden;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text);
         }
 
-        .cta-primary::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.45), transparent);
-            transform: translateX(-100%);
-            opacity: 0;
+        .skill-item::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
         }
 
-        .cta-primary:hover::before {
-            opacity: 1;
-            transform: translateX(100%);
-            transition: transform 0.7s ease-out, opacity 0.2s ease-out;
-        }
-
-        .cta-secondary {
-            background: rgba(5, 7, 10, 0.7);
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 9px 16px;
-            font-size: 12px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--muted);
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(14px);
-        }
-
-        .cta-contacts {
-            font-size: 12px;
-            color: var(--muted-soft);
-        }
-
+        /* Footer */
         footer {
-            background: #05070a;
-            border-top: 1px solid rgba(255, 255, 255, 0.16);
-            padding: 24px 0 18px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 24px 30px;
         }
 
         .footer-container {
-            max-width: 1120px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 24px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
-            gap: 24px;
-            align-items: flex-start;
-            margin-bottom: 14px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            grid-column: span 1;
         }
 
         .footer-brand-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .footer-brand-logo img {
-            width: 32px;
-            height: 32px;
-            border-radius: 999px;
-            object-fit: cover;
+            gap: 4px;
+            margin-bottom: 16px;
         }
 
         .footer-brand-name {
-            font-size: 14px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: #f7f7f7;
+            font-size: 19px;
             font-weight: 600;
+            line-height: 1;
         }
 
         .footer-brand-text {
-            font-size: 12px;
-            color: var(--muted-soft);
-            max-width: 380px;
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.6;
         }
 
         .footer-section h4 {
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: var(--muted-soft);
-            margin: 0 0 8px;
+            letter-spacing: 0.5px;
         }
 
         .footer-links {
             list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 4px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
         }
 
         .footer-links a {
-            font-size: 12px;
-            color: var(--muted-soft);
-            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.16);
-            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
-            color: var(--muted-softer);
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .mobile-menu {
-            display: none;
-        }
-
-        @media (max-width: 900px) {
-            .nav-center {
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
                 display: none;
             }
 
-            .nav-cta {
+            .lang-toggle {
                 display: none;
             }
 
-            .nav-toggle {
-                display: inline-flex;
+            .hamburger {
+                display: flex;
             }
 
-            .hero-inner {
-                grid-template-columns: minmax(0, 1fr);
+            .hero-title {
+                font-size: 32px;
             }
 
-            .hero-right-inner {
-                margin-top: 10px;
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
             }
 
             .about-grid,
-            .trust-grid,
-            .projects-grid,
             .partners-grid,
-            .founder-grid,
-            .footer-grid {
-                grid-template-columns: minmax(0, 1fr);
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .founder-card {
-                grid-template-columns: minmax(0, 1fr);
+                flex-direction: column;
             }
 
-            .hero {
-                padding-bottom: 40px;
+            .founder-image-wrapper {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 32px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stats-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
 
             section {
-                padding: 40px 0;
+                padding: 60px 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
             }
 
             .footer-bottom {
                 flex-direction: column;
-                gap: 4px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-title {
-                font-size: 26px;
-            }
-
-            .hero-inner {
-                gap: 28px;
-            }
-
-            .founder-card {
-                padding: 16px;
-            }
-
-            .hero-cta-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .hero-cta-secondary {
-                justify-content: center;
-                width: 100%;
+                text-align: center;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="page-wrapper">
-        <header>
-            <div class="nav">
-                <div class="nav-left">
-                    <div class="logo">
-                        <div class="logo-inner">
-                            <span>DV</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="brand-name">DEVENVEST</div>
-                        <div class="brand-subtitle" data-ru="Инвестиции в недвижимость и девелопмент в Болгарии"
-                            data-en="Real estate and development investments in Bulgaria">Инвестиции в недвижимость и
-                            девелопмент в Болгарии</div>
-                    </div>
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-flex">
+                    <a href="#" class="logo-link">
+                        <img src="assets/logo fenix 2.png" alt="Devenvest" class="site-logo">
+                        <span>DEVENVEST</span>
+                    </a>
+                    <nav class="nav-menu">
+                        <a href="#about" class="nav-link" data-ru="О компании" data-en="About">О компании</a>
+                        <a href="#trust" class="nav-link" data-ru="Безопасность" data-en="Security">Безопасность</a>
+                        <a href="#projects" class="nav-link" data-ru="Проекты" data-en="Projects">Проекты</a>
+                        <a href="#partners" class="nav-link" data-ru="Партнёрам" data-en="Partners">Партнёрам</a>
+                        <a href="#founder" class="nav-link" data-ru="Основатели" data-en="Founders">Основатели</a>
+                    </nav>
+                    <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">EN</button>
                 </div>
-
-                <div class="nav-center">
-                    <div class="nav-center-inner">
-                        <a href="#about" class="nav-link" data-ru="О компании" data-en="About"><span>О компании</span></a>
-                        <a href="#trust" class="nav-link" data-ru="Безопасность" data-en="Security"><span>Безопасность</span></a>
-                        <a href="#projects" class="nav-link" data-ru="Проекты" data-en="Projects"><span>Проекты</span></a>
-                        <a href="#partners" class="nav-link" data-ru="Партнёрам" data-en="Partners"><span>Партнёрам</span></a>
-                        <a href="#founder" class="nav-link" data-ru="Основатель" data-en="Founder"><span>Основатель</span></a>
-                    </div>
-                </div>
-
-                <div class="nav-right">
-                    <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">
-                        <span>EN</span>
-                    </button>
-                    <button class="nav-cta" onclick="scrollToSection('cta')">
-                        <span>ОБСУДИТЬ ПРОЕКТ</span>
-                        <span class="nav-cta-icon">→</span>
-                    </button>
-                    <button class="nav-toggle" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <button class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </div>
+    </header>
 
-            <div id="mobileMenu" class="mobile-menu" style="display: none; background: rgba(5,7,10,0.98); border-top: 1px solid var(--border-subtle);">
-                <nav style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
-                    <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="О компании" data-en="About">О компании</a>
-                    <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Безопасность" data-en="Security">Безопасность</a>
-                    <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Проекты" data-en="Projects">Проекты</a>
-                    <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Партнёрам" data-en="Partners">Партнёрам</a>
-                    <a href="#founder" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Основатель" data-en="Founder">Основатель</a>
-                    <button class="lang-toggle" onclick="toggleLanguage()" style="width: 100%; margin-top: 20px;" id="langBtnMobile">EN</button>
-                </nav>
-                <div style="padding: 32px; border-top: 1px solid var(--border-subtle);">
-                    <button class="nav-cta" style="width: 100%; justify-content: center;" onclick="scrollToSection('cta')">
-                        <span data-ru="ОБСУДИТЬ ПРОЕКТ" data-en="DISCUSS A PROJECT">ОБСУДИТЬ ПРОЕКТ</span>
-                        <span class="nav-cta-icon">→</span>
-                    </button>
-                </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="mobile-menu-panel" id="menuPanel">
+        <div style="padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 18px; font-weight: 600; color: var(--primary);">DEVENVEST</span>
             </div>
-        </header>
-
-        <main>
-            <section class="hero">
-                <div class="container">
-                    <div class="hero-inner">
-                        <div>
-                            <div class="hero-badge">
-                                <div class="hero-badge-glow"></div>
-                                <div class="hero-badge-content">
-                                    <div class="hero-badge-title" data-ru="ИНВЕСТИЦИИ В НЕДВИЖИМОСТЬ БОЛГАРИИ" data-en="REAL ESTATE INVESTMENTS IN BULGARIA">ИНВЕСТИЦИИ В НЕДВИЖИМОСТЬ БОЛГАРИИ</div>
-                                    <div class="hero-badge-subtitle" data-ru="Отбор, структурирование и управление проектами, в которые сами бы вложили деньги" data-en="Selection, structuring and management of projects we would invest in ourselves">Отбор, структурирование и управление проектами, в которые сами бы вложили деньги</div>
-                                </div>
-                            </div>
-
-                            <h1 class="hero-title" data-ru="Инвестируем в&nbsp;девелоперские проекты, where доход и безопасность просчитываются заранее" data-en="We invest in development projects where returns and safety are calculated in advance">
-                                Инвестируем в <span class="hero-highlight">девелоперские проекты</span>, где доход и безопасность просчитываются заранее
-                            </h1>
-
-                            <p class="hero-subtitle" data-ru="Мы создаём и реализуем проекты в недвижимости Болгарии для инвесторов, которым важны понятная математика, контроль рисков и прозрачность всех этапов." data-en="We create and execute real estate projects in Bulgaria for investors who value clear math, risk control and transparency at every stage.">
-                                Мы создаём и реализуем проекты в недвижимости Болгарии для инвесторов, которым важны понятная математика, контроль рисков и прозрачность всех этапов.
-                            </p>
-
-                            <ul class="hero-list">
-                                <li data-ru="Структурируем сделки так, чтобы интерес инвестора был защищён юридически и экономически" data-en="We structure deals so that investor interest is protected legally and economically">
-                                    <span class="hero-list-bullet">✓</span>
-                                    <span>Структурируем сделки так, чтобы интерес инвестора был защищён юридически и экономически</span>
-                                </li>
-                                <li data-ru="Заходим только в проекты с понятным выходом и контролируем реализацию до результата" data-en="We only enter projects with a clear exit and control execution to the result">
-                                    <span class="hero-list-bullet">✓</span>
-                                    <span>Заходим только в проекты с понятным выходом и контролируем реализацию до результата</span>
-                                </li>
-                            </ul>
-
-                            <div class="hero-cta-row">
-                                <button class="hero-cta-primary" onclick="scrollToSection('cta')">
-                                    <span data-ru="ОБСУДИТЬ ПРОЕКТ" data-en="DISCUSS A PROJECT">ОБСУДИТЬ ПРОЕКТ</span>
-                                    <span class="nav-cta-icon">→</span>
-                                </button>
-                                <button class="hero-cta-secondary" onclick="scrollToSection('projects')">
-                                    <span class="hero-cta-secondary-icon">⋯</span>
-                                    <span data-ru="Посмотреть формат и примеры" data-en="See format and examples">Посмотреть формат и примеры</span>
-                                </button>
-                            </div>
-
-                            <div class="hero-footnote" data-ru="Работаем с частными инвесторами, семьей, партнёрами и небольшими фондами" data-en="We work with private investors, families, partners and small funds">
-                                Работаем с частными инвесторами, семьей, партнёрами и небольшими фондами
-                            </div>
-
-                            <div class="hero-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">20+</div>
-                                    <div class="metric-label" data-ru="лет опыта в недвижимости и финансах" data-en="years in real estate and finance">лет опыта в недвижимости и финансах</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">500 млн ₽</div>
-                                    <div class="metric-label" data-ru="средний квартальный объём закупок активов в предыдущих проектах" data-en="average quarterly acquisition volume in previous projects">средний квартальный объём закупок активов в предыдущих проектах</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="hero-right">
-                            <div class="hero-right-inner">
-                                <div class="hero-plan-header">
-                                    <div class="hero-plan-badge" data-ru="ФОРМАТ РАБОТЫ" data-en="WORK FORMAT">ФОРМАТ РАБОТЫ</div>
-                                    <div class="hero-plan-tagline" data-ru="Девелопмент и редевелопмент с прозрачной математикой" data-en="Development and redevelopment with clear math">Девелопмент и редевелопмент с прозрачной математикой</div>
-                                </div>
-
-                                <div class="hero-plan-main">
-                                    <div class="hero-plan-metric">
-                                        <div class="hero-plan-topline" data-ru="ЦЕЛЬ ПО ДОХОДНОСТИ" data-en="TARGET RETURN">ЦЕЛЬ ПО ДОХОДНОСТИ</div>
-                                        <div class="hero-plan-value" data-ru="от 25–40% годовых" data-en="from 25–40% annually">от 25–40% годовых</div>
-                                        <div class="hero-plan-comment" data-ru="по реализованным и просчитанным проектам при контроле рисков" data-en="on executed and modelled projects with risk control">по реализованным и просчитанным проектам при контроле рисков</div>
-                                    </div>
-
-                                    <div class="hero-plan-details">
-                                        <div class="hero-plan-detail-item">
-                                            <span class="hero-plan-detail-marker">✓</span>
-                                            <span data-ru="Фокус на объектах с понятной добавленной стоимостью — редевелопмент, реконструкция, достройка" data-en="Focus on assets with clear added value: redevelopment, reconstruction, completion">Фокус на объектах с понятной добавленной стоимостью — редевелопмент, реконструкция, достройка</span>
-                                        </div>
-                                        <div class="hero-plan-detail-item">
-                                            <span class="hero-plan-detail-marker">✓</span>
-                                            <span data-ru="Интерес инвестора юридически закреплён и привязан к объекту" data-en="Investor interest is legally secured and tied to the asset">Интерес инвестора юридически закреплён и привязан к объекту</span>
-                                        </div>
-                                        <div class="hero-plan-detail-item">
-                                            <span class="hero-plan-detail-marker">✓</span>
-                                            <span data-ru="Отбираем только те проекты, в которых сами готовы участвовать деньгами" data-en="We only select projects we are ready to invest in ourselves">Отбираем только те проекты, в которых сами готовы участвовать деньгами</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="hero-plan-footer">
-                                    <div class="hero-plan-progress">
-                                        <div class="hero-plan-progress-fill"></div>
-                                    </div>
-                                    <div class="hero-plan-status">
-                                        <span class="hero-plan-status-dot"></span>
-                                        <span data-ru="Проекты проходят фильтр по рискам и ликвидности" data-en="Projects pass a risk and liquidity filter">Проекты проходят фильтр по рискам и ликвидности</span>
-                                    </div>
-                                </div>
-
-                                <div class="hero-mini-card-row">
-                                    <div class="hero-mini-card">
-                                        <div class="hero-mini-card-title" data-ru="Форма участия" data-en="Participation form">Форма участия</div>
-                                        <div class="hero-mini-card-value" data-ru="Инвестиционный контракт + контроль объекта" data-en="Investment contract + asset control">Инвестиционный контракт + контроль объекта</div>
-                                        <div class="hero-mini-card-tag" data-ru="Интерес инвестора защищён и привязан к конкретному проекту" data-en="Investor interest is secured and tied to a specific project">Интерес инвестора защищён и привязан к конкретному проекту</div>
-                                    </div>
-                                    <div class="hero-mini-card">
-                                        <div class="hero-mini-card-title" data-ru="Порог входа" data-en="Entry threshold">Порог входа</div>
-                                        <div class="hero-mini-card-value" data-ru="от 50 000 €" data-en="from 50 000 €">от 50 000 €</div>
-                                        <div class="hero-mini-card-tag" data-ru="Для частных инвесторов, партнёров и семей" data-en="For private investors, partners and families">Для частных инвесторов, партнёров и семей</div>
-                                    </div>
-                                </div>
-
-                                <div class="hero-floating-tag" data-ru="ПРОЗРАЧНЫЕ ЦИФРЫ И СРОКИ" data-en="CLEAR NUMBERS AND TERMS">ПРОЗРАЧНЫЕ ЦИФРЫ И СРОКИ</div>
-
-                                <div class="hero-floating-stat">
-                                    <div class="hero-floating-stat-dot">ℹ</div>
-                                    <div>
-                                        <div class="hero-floating-stat-value" data-ru="Полная аналитика проекта до входа" data-en="Full project analytics before entry">Полная аналитика проекта до входа</div>
-                                        <div style="font-size: 10px; color: var(--muted-soft);" data-ru="Показываем расчёты, риски, сценарии и выходим только в понятные сделки" data-en="We show calculations, risks, scenarios and only enter clear deals">Показываем расчёты, риски, сценарии и выходим только в понятные сделки</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-partners">
-                        <div class="hero-partners-pill" data-ru="ДЛЯ ИНВЕСТОРОВ" data-en="FOR INVESTORS">ДЛЯ ИНВЕСТОРОВ</div>
-                        <div data-ru="Ищете, куда вложить капитал в Болгарии с понятной математикой и управлением?" data-en="Looking where to invest capital in Bulgaria with clear math and management?">
-                            Ищете, куда вложить капитал в Болгарии с понятной математикой и управлением?
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about">
-                <div class="container">
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <span class="about-tag" data-ru="О компании" data-en="About Us">О компании</span>
-                            <h2 data-ru="Практический опыт и одна цель: безопасно и прибыльно развивать недвижимость в Болгарии" data-en="Practical experience and one goal: safely and profitably develop real estate in Bulgaria">Практический опыт и одна цель: безопасно и прибыльно развивать недвижимость в Болгарии</h2>
-                            <p data-ru="DEVENVEST — это инвестиционная платформа, которая соединяет капитал инвестора и практический опыт в девелопменте. Мы работаем с объектами, в которых можно создать добавленную стоимость: редевелопмент, реконструкция, изменение назначения, эффективное управление." data-en="DEVENVEST is an investment platform that connects investor capital with practical development experience. We work with assets where added value can be created: redevelopment, reconstruction, change of use, efficient management.">
-                                DEVENVEST — это инвестиционная платформа, которая соединяет капитал инвестора и практический опыт в девелопменте. Мы работаем с объектами, в которых можно создать добавленную стоимость: редевелопмент, реконструкция, изменение назначения, эффективное управление.
-                            </p>
-                            <p data-ru="Мы не продаём готовые квартиры и не действуем как классическое агентство. Наша задача — находить, просчитывать и реализовывать проекты, где доходность обусловлена не только ростом рынка, а конкретными управленческими решениями и разработанной стратегией." data-en="We do not sell ready-made apartments and do not act as a classic agency. Our task is to find, calculate and execute projects where returns come not only from market growth but from concrete management decisions and a designed strategy.">
-                                Мы не продаём готовые квартиры и не действуем как классическое агентство. Наша задача — находить, просчитывать и реализовывать проекты, где доходность обусловлена не только ростом рынка, а конкретными управленческими решениями и разработанной стратегией.
-                            </p>
-
-                            <div class="about-stats">
-                                <div class="stat-card">
-                                    <div class="stat-value" data-ru="20+ лет" data-en="20+ years">20+ лет</div>
-                                    <div class="stat-label" data-ru="Опыта команды" data-en="Team Experience">Опыта команды</div>
-                                </div>
-                                <div class="stat-card">
-                                    <div class="stat-value" data-ru="500 млн ₽" data-en="500M ₽">500 млн ₽</div>
-                                    <div class="stat-label" data-ru="Средний квартальный объём закупок активов в предыдущих проектах" data-en="Average quarterly asset acquisition volume in previous projects">Средний квартальный объём закупок активов в предыдущих проектах</div>
-                                </div>
-                            </div>
-
-                            <div class="about-points">
-                                <div class="about-points-title" data-ru="ЧТО МЫ ДЕЛАЕМ" data-en="WHAT WE DO">ЧТО МЫ ДЕЛАЕМ</div>
-                                <ul class="about-points-list">
-                                    <li data-ru="Находим объекты с потенциалом роста стоимости за счёт редевелопмента, реконструкции или смены концепции" data-en="We find assets with value growth potential through redevelopment, reconstruction or concept change">Находим объекты с потенциалом роста стоимости за счёт редевелопмента, реконструкции или смены концепции</li>
-                                    <li data-ru="Проводим аналитику, моделируем сценарии, считаем риски и окупаемость" data-en="We carry out analytics, model scenarios, calculate risks and payback">Проводим аналитику, моделируем сценарии, считаем риски и окупаемость</li>
-                                    <li data-ru="Структурируем сделку так, чтобы интерес инвестора был защищён и прозрачен" data-en="We structure deals so that investor interest is protected and transparent">Структурируем сделку так, чтобы интерес инвестора был защищён и прозрачен</li>
-                                    <li data-ru="Запускаем проект, управляем реализацией и выходим на результат" data-en="We launch the project, manage execution and reach the result">Запускаем проект, управляем реализацией и выходим на результат</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="about-image-card">
-                            <img src="assets/Varna.jpg" alt="Вид на Варну и побережье Болгарии" class="about-image">
-                            <div class="about-image-overlay"></div>
-                            <div class="about-image-caption">
-                                <strong data-ru="Фокус — Болгария" data-en="Focus — Bulgaria">Фокус — Болгария</strong>
-                                <span data-ru="Регион, в котором мы глубоко понимаем рынок, законодательство и риски, и сами реализуем проекты" data-en="A region where we deeply understand the market, legislation and risks and implement projects ourselves">
-                                    Регион, в котором мы глубоко понимаем рынок, законодательство и риски, и сами реализуем проекты
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Trust Section -->
-            <section id="trust">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-tag" data-ru="Безопасность" data-en="Security">Безопасность</span>
-                        <h2 class="section-title" data-ru="Как мы защищаем интерес инвестора" data-en="How we protect investor interest">Как мы защищаем интерес инвестора</h2>
-                        <p class="section-subtitle" data-ru="Инвестиции в недвижимость должны быть понятными: вы знаете, куда заходят деньги, какие риски есть и как они закрываются. Поэтому мы строим систему защиты инвестора на трёх уровнях." data-en="Real estate investments must be clear: you know where the money goes, what risks exist and how they are covered. That is why we build investor protection on three levels.">
-                            Инвестиции в недвижимость должны быть понятными: вы знаете, куда заходят деньги, какие риски есть и как они закрываются. Поэтому мы строим систему защиты инвестора на трёх уровнях.
-                        </p>
-                    </div>
-
-                    <div class="trust-grid">
-                        <div class="trust-card">
-                            <h3 class="trust-card-title" data-ru="1. Юридическая защита и структура сделки" data-en="1. Legal protection and deal structure">1. Юридическая защита и структура сделки</h3>
-                            <p class="trust-card-text" data-ru="Мы выстраиваем сделку так, чтобы интерес инвестора был закреплён в юридических документах и привязан к конкретному активу или проекту." data-en="We structure the deal so that investor interest is fixed in legal documents and tied to a specific asset or project.">
-                                Мы выстраиваем сделку так, чтобы интерес инвестора был закреплён в юридических документах и привязан к конкретному активу или проекту.
-                            </p>
-                            <ul class="trust-list">
-                                <li data-ru="Инвестиционный контракт с чёткими условиями входа, выхода, распределения дохода" data-en="Investment contract with clear terms of entry, exit and profit distribution">Инвестиционный контракт с чёткими условиями входа, выхода, распределения дохода</li>
-                                <li data-ru="Привязка инвестиций к объекту или проектной компании" data-en="Linking investment to an asset or project company">Привязка инвестиций к объекту или проектной компании</li>
-                                <li data-ru="Прозрачная схема владения и управления" data-en="Transparent ownership and management structure">Прозрачная схема владения и управления</li>
-                            </ul>
-                        </div>
-
-                        <div class="shield-card">
-                            <div class="shield-icon">
-                                <span>盾</span>
-                            </div>
-                            <h3 class="shield-title" data-ru="2. Контроль рисков и реалистичная математика" data-en="2. Risk control and realistic math">2. Контроль рисков и реалистичная математика</h3>
-                            <p class="shield-text" data-ru="Мы не даём обещаний, которые держатся только на красивой презентации. Каждый проект проходит стресс‑тесты по сценарию: базовый, оптимистичный и консервативный." data-en="We do not give promises based only on a beautiful presentation. Each project passes stress-tests in base, optimistic and conservative scenarios.">
-                                Мы не даём обещаний, которые держатся только на красивой презентации. Каждый проект проходит стресс‑тесты по сценарию: базовый, оптимистичный и консервативный.
-                            </p>
-                            <div class="shield-badges">
-                                <div class="shield-badge" data-ru="Показываем расчёты, а не только финальный % доходности" data-en="We show calculations, not just the final % of return">Показываем расчёты, а не только финальный % доходности</div>
-                                <div class="shield-badge" data-ru="Фиксируем ключевые допущения и риски" data-en="We fix key assumptions and risks">Фиксируем ключевые допущения и риски</div>
-                                <div class="shield-badge" data-ru="Регулярно обновляем фактические показатели по ходу проекта" data-en="We regularly update actual indicators during the project">Регулярно обновляем фактические показатели по ходу проекта</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-tag" data-ru="Проекты" data-en="Projects">Проекты</span>
-                        <h2 class="section-title" data-ru="Во что мы заходим и как считаем доходность" data-en="What we enter and how we calculate returns">Во что мы заходим и как считаем доходность</h2>
-                        <p class="section-subtitle" data-ru="Наша специализация — проекты, где стоимость объекта растёт не только за счёт рынка, а за счёт работы с самим активом: редевелопмент, реконструкция, изменение назначения, повышение эффективности." data-en="Our specialization is projects where asset value grows not only due to the market but due to work with the asset itself: redevelopment, reconstruction, change of use, efficiency improvement.">
-                            Наша специализация — проекты, где стоимость объекта растёт не только за счёт рынка, а за счёт работы с самим активом: редевелопмент, реконструкция, изменение назначения, повышение эффективности.
-                        </p>
-                    </div>
-
-                    <div class="projects-tabs">
-                        <button class="projects-tab projects-tab-active" data-ru="Редевелопмент" data-en="Redevelopment">Редевелопмент</button>
-                        <button class="projects-tab" data-ru="Реконструкция" data-en="Reconstruction">Реконструкция</button>
-                        <button class="projects-tab" data-ru="Доходные объекты" data-en="Income assets">Доходные объекты</button>
-                    </div>
-
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <h3 class="project-title" data-ru="Пример проекта: редевелопмент старого здания в Варне" data-en="Sample project: redevelopment of an old building in Varna">Пример проекта: редевелопмент старого здания в Варне</h3>
-                            <p class="project-subtitle" data-ru="Покупка объекта с потенциалом структурных изменений и модернизации, изменение функционала и повышение стоимости за счёт редевелопмента." data-en="Acquisition of an asset with potential for structural changes and modernization, change of function and value increase through redevelopment.">
-                                Покупка объекта с потенциалом структурных изменений и модернизации, изменение функционала и повышение стоимости за счёт редевелопмента.
-                            </p>
-
-                            <div class="project-metrics">
-                                <div class="project-metric">
-                                    <span data-ru="Срок проекта" data-en="Project term">Срок проекта</span>
-                                    18–24 мес.
-                                </div>
-                                <div class="project-metric">
-                                    <span data-ru="Цель по доходности" data-en="Target return">Цель по доходности</span>
-                                    25–40% годовых
-                                </div>
-                                <div class="project-metric">
-                                    <span data-ru="Форма участия" data-en="Participation form">Форма участия</span>
-                                    Инвестконтракт
-                                </div>
-                            </div>
-
-                            <p class="project-notes" data-ru="На встрече мы показываем подробный пример проекта: исходные данные, математику, риски, сценарии и то, как принимаем решения по входу/выходу для инвестора." data-en="At the meeting we show a detailed project example: initial data, math, risks, scenarios and how we make entry/exit decisions for the investor.">
-                                На встрече мы показываем подробный пример проекта: исходные данные, математику, риски, сценарии и то, как принимаем решения по входу/выходу для инвестора.
-                            </p>
-                        </div>
-
-                        <div class="project-side-card">
-                            <h3 class="project-title" data-ru="Что вы получаете как инвестор" data-en="What you get as an investor">Что вы получаете как инвестор</h3>
-                            <ul class="trust-list">
-                                <li data-ru="Доступ к проектам с профессионально просчитанной математикой и сценариями" data-en="Access to projects with professionally calculated math and scenarios">Доступ к проектам с профессионально просчитанной математикой и сценариями</li>
-                                <li data-ru="Участие в сделках, к которым невозможно подключиться через обычное агентство" data-en="Participation in deals you can’t access via a regular agency">Участие в сделках, к которым невозможно подключиться через обычное агентство</li>
-                                <li data-ru="Постоянную коммуникацию и отчётность по ходу реализации проекта" data-en="Ongoing communication and reporting during project execution">Постоянную коммуникацию и отчётность по ходу реализации проекта</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Partners Section -->
-            <section id="partners">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-tag" data-ru="Партнёрам" data-en="Partners">Партнёрам</span>
-                        <h2 class="section-title" data-ru="Кому мы особенно полезны" data-en="Who we are especially useful for">Кому мы особенно полезны</h2>
-                        <p class="section-subtitle" data-ru="Мы работаем с инвесторами, для которых важны не только цифры на бумаге, но и то, что стоит за ними: реальные сценарии, управление и контроль этапов." data-en="We work with investors who care not only about numbers on paper but what stands behind them: real scenarios, management and stage control.">
-                            Мы работаем с инвесторами, для которых важны не только цифры на бумаге, но и то, что стоит за ними: реальные сценарии, управление и контроль этапов.
-                        </p>
-                    </div>
-
-                    <div class="partners-grid">
-                        <div class="partners-card">
-                            <h3 class="trust-card-title" data-ru="Частные инвесторы и семьи" data-en="Private investors and families">Частные инвесторы и семьи</h3>
-                            <p class="trust-card-text" data-ru="Если у вас есть капитал, и вы хотите разместить его в недвижимость Болгарии так, чтобы понимать, как и за счёт чего формируется доход — мы можем быть вашим партнёром по проектам." data-en="If you have capital and want to place it in Bulgarian real estate with a clear understanding of how and why returns are formed, we can be your project partner.">
-                                Если у вас есть капитал, и вы хотите разместить его в недвижимость Болгарии так, чтобы понимать, как и за счёт чего формируется доход — мы можем быть вашим партнёром по проектам.
-                            </p>
-                            <div class="partners-roles">
-                                <div class="partners-role" data-ru="Инвесторы, выходящие из бизнеса" data-en="Investors exiting business">Инвесторы, выходящие из бизнеса</div>
-                                <div class="partners-role" data-ru="Семейные капиталы" data-en="Family capital">Семейные капиталы</div>
-                                <div class="partners-role" data-ru="Опытные инвесторы, заходящие в новый регион" data-en="Experienced investors entering a new region">Опытные инвесторы, заходящие в новый регион</div>
-                            </div>
-                            <div class="partners-cta" data-ru="Мы не предлагаем «одну волшебную стратегию для всех». На встрече мы разбираем вашу ситуацию: горизонты, толерантность к риску, пожелания по структуре и только после этого предлагаем решения." data-en="We do not offer a 'one magic strategy for all'. At the meeting we go through your situation: horizons, risk tolerance, structure preferences and only then propose solutions.">
-                                Мы не предлагаем «одну волшебную стратегию для всех». На встрече мы разбираем вашу ситуацию: горизонты, толерантность к риску, пожелания по структуре и только после этого предлагаем решения.
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="partners-benefits">
-                                <div class="partners-benefit" data-ru="Вы получаете доступ к проектам, которые не лежат в открытой витрине рынка" data-en="You get access to projects that are not on the open market shelf">Вы получаете доступ к проектам, которые не лежат в открытой витрине рынка</div>
-                                <div class="partners-benefit" data-ru="Интересы закрепляются юридически и подкреплены реальными активами" data-en="Interests are legally secured and backed by real assets">Интересы закрепляются юридически и подкреплены реальными активами</div>
-                                <div class="partners-benefit" data-ru="Видите и обсуждаете математику, сценарии и риски до входа в сделку" data-en="You see and discuss math, scenarios and risks before entering the deal">Видите и обсуждаете математику, сценарии и риски до входа в сделку</div>
-                                <div class="partners-benefit" data-ru="Получаете партнёра, который сам заинтересован в успехе проекта" data-en="You get a partner who is personally interested in project success">Получаете партнёра, который сам заинтересован в успехе проекта</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Founder Section -->
-            <section id="founder">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-tag" data-ru="Основатель" data-en="Founder">Основатель</span>
-                    </div>
-                    <div class="founder-grid founder-grid-single">
-                        <!-- Founder 1: Александр Фанайлов -->
-                        <div class="founder-card">
-                            <div class="founder-image-wrapper">
-                                <img src="assets/founder 1.png?v=4" alt="Александр Фанайлов" style="object-position: center;">
-                            </div>
-                            <div class="founder-content">
-                                <h3 data-ru="Александр Фанайлов" data-en="Alexander Fanaylov">Александр Фанайлов</h3>
-                                <p class="founder-quote" data-ru="&quot;Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций.&quot;" data-en="&quot;We select projects so that returns are obvious and clear immediately. And we guarantee money protection - the kind we would want for our own investments.&quot;">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
-                                <p class="founder-bio" data-ru="20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале" data-en="20 years in real estate and finance in the Moscow market, worked on projects with Samolet, PIK and other major developers. Managed procurement of investment assets in several companies with an average plan of 500 million rubles per quarter. Worked in Moscow with private investors individually, now bringing my experience to Bulgaria and building a healthy investment company where you can earn on your capital">
-                                    20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале
-                                </p>
-                                <div class="skills-grid">
-                                    <div class="skill-item" data-ru="Структурирование сделок" data-en="Deal Structuring">Структурирование сделок</div>
-                                    <div class="skill-item" data-ru="Оценка инвестиций" data-en="Investment Evaluation">Оценка инвестиций</div>
-                                    <div class="skill-item" data-ru="Управление девелопментом" data-en="Development Management">Управление девелопментом</div>
-                                    <div class="skill-item" data-ru="Управление портфелем" data-en="Portfolio Management">Управление портфелем</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section id="cta">
-                <div class="container">
-                    <div class="cta-card">
-                        <h2 class="cta-title" data-ru="Если вам близок такой подход — давайте познакомимся" data-en="If this approach resonates with you, let's talk">Если вам близок такой подход — давайте познакомимся</h2>
-                        <p class="cta-text" data-ru="Напишите нам, если вы рассматриваете инвестиции в недвижимость и девелопмент в Болгарии, хотите разобраться в вариантах и увидеть конкретные проекты и математику." data-en="Write to us if you are considering real estate and development investments in Bulgaria, want to understand options and see concrete projects and math.">
-                            Напишите нам, если вы рассматриваете инвестиции в недвижимость и девелопмент в Болгарии, хотите разобраться в вариантах и увидеть конкретные проекты и математику.
-                        </p>
-
-                        <div class="cta-actions">
-                            <button class="cta-primary" onclick="window.location.href='https://t.me/devenvest'">
-                                <span data-ru="НАПИСАТЬ В TELEGRAM" data-en="WRITE IN TELEGRAM">НАПИСАТЬ В TELEGRAM</span>
-                                <span class="nav-cta-icon">↗</span>
-                            </button>
-                            <button class="cta-secondary" onclick="window.location.href='mailto:info@devenvest.com'">
-                                <span data-ru="Написать на email" data-en="Write via email">Написать на email</span>
-                            </button>
-                        </div>
-
-                        <div class="cta-contacts">
-                            <div data-ru="Telegram: @devenvest" data-en="Telegram: @devenvest">Telegram: @devenvest</div>
-                            <div data-ru="Email: info@devenvest.com" data-en="Email: info@devenvest.com">Email: info@devenvest.com</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <div class="footer-brand-logo">
-                            <img src="assets/logo fenix 2.png" alt="Devenvest">
-                            <span class="footer-brand-name">DEVENVEST</span>
-                        </div>
-                        <p class="footer-brand-text" data-ru="Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнёров." data-en="We invest in real estate and development. Making investments clear and reliable for our partners.">
-                            Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнёров.
-                        </p>
-                    </div>
-                    <div class="footer-section">
-                        <h4 data-ru="Навигация" data-en="Navigation">Навигация</h4>
-                        <ul class="footer-links">
-                            <li><a href="#about" data-ru="О компании" data-en="About">О компании</a></li>
-                            <li><a href="#trust" data-ru="Безопасность" data-en="Security">Безопасность</a></li>
-                            <li><a href="#projects" data-ru="Проекты" data-en="Projects">Проекты</a></li>
-                            <li><a href="#partners" data-ru="Партнёрам" data-en="Partners">Партнёрам</a></li>
-                            <li><a href="#founder" data-ru="Основатель" data-en="Founder">Основатель</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4 data-ru="Контакты" data-en="Contacts">Контакты</h4>
-                        <ul class="footer-links">
-                            <li data-ru="Telegram: @devenvest" data-en="Telegram: @devenvest">Telegram: @devenvest</li>
-                            <li data-ru="Email: info@devenvest.com" data-en="Email: info@devenvest.com">Email: info@devenvest.com</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p data-ru="&copy; 2026 Devenvest. Все права защищены." data-en="&copy; 2026 Devenvest. All rights reserved.">&copy; 2026 Devenvest. Все права защищены.</p>
-                    <span data-ru="Профессиональная платформа инвестиций в недвижимость" data-en="Professional real estate investment platform">Профессиональная платформа инвестиций в недвижимость</span>
-                </div>
-            </div>
-        </footer>
+            <button onclick="toggleMenu()" style="background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
+        </div>
+        <nav style="flex-grow: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
+            <a href="#about" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="О компании" data-en="About">О компании</a>
+            <a href="#trust" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Безопасность" data-en="Security">Безопасность</a>
+            <a href="#projects" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Проекты" data-en="Projects">Проекты</a>
+            <a href="#partners" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Партнёрам" data-en="Partners">Партнёрам</a>
+            <a href="#founder" onclick="toggleMenu()" class="nav-link" style="font-size: 18px;" data-ru="Основатели" data-en="Founders">Основатели</a>
+            <button class="lang-toggle" onclick="toggleLanguage()" style="width: 100%; margin-top: 20px;" id="langBtnMobile">EN</button>
+        </nav>
+        <div style="padding: 32px; border-top: 1px solid var(--border);">
+            <a href="https://t.me/devenvest" class="nav-btn" style="width: 100%; text-align: center;" data-ru="Telegram Канал" data-en="Telegram Channel">Telegram Канал</a>
+        </div>
     </div>
 
+    <!-- Hero Section -->
+    <section class="hero-pattern">
+        <div class="hero-content">
+            <div class="hero-badge" data-ru="Коллективные инвестиции" data-en="Collective Investments">Коллективные инвестиции</div>
+            <h1 class="hero-title"><span data-ru="Инвестиции в" data-en="Investing in">Инвестиции в</span> <span class="highlight" data-ru="прибыльные активы" data-en="profitable assets">прибыльные активы</span> <span data-ru="с опытным партнером" data-en="with an experienced partner">с опытным партнером</span></h1>
+            <p class="hero-subtitle" data-ru="Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции" data-en="Access to large projects with small investments. Capital diversification and legal protection of each investment">Вход в большие проекты с малым чеком. Диверсификация капитала и юридическая защита каждой инвестиции</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary" data-ru="Посмотреть проекты" data-en="View Projects">Посмотреть проекты</a>
+                <a href="https://t.me/Alejandrov2000" class="btn btn-secondary" data-ru="Написать в Telegram" data-en="Write to Telegram">Написать в Telegram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="about-tag" data-ru="О компании" data-en="About Us">О компании</span>
+                    <h2 data-ru="Когда частные деньги встречают большие проекты" data-en="When private capital meets major projects">Когда частные деньги встречают большие проекты</h2>
+                    <p data-ru="Мы не очередная &quot;инвестиционная компания&quot;. Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации" data-en="We're not just another 'investment company'. We're the guys who actually take on projects ourselves, not just connect people. We personally participate at every stage: from finding the property to its realization">Мы не очередная "инвестиционная компания". Мы - те самые ребята, которые сами берутся за проекты, а не просто сводят людей. Мы лично участвуем на каждом этапе: от поиска объекта до его реализации</p>
+                    <p data-ru="Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств." data-en="We help private investors access deals that were previously available only to major players. We do redevelopment of existing buildings, build new ones, develop cottage villages, reconstruct hotels, flip individual properties, including with our own capital.">Мы помогаем частным инвесторам заходить в сделки, которые раньше были доступны только большим игрокам. Делаем редевелопмент готовых зданий, строим новые, строим коттеджные поселки, реконструируем отели, делаем флиппинг отдельных готовых объектов недвижимости, в том числе с участием собственных средств.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">10+ млн €</div>
+                            <div class="stat-label" data-ru="Инвестировано" data-en="Invested">Инвестировано</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" data-ru="20+ лет" data-en="20+ years">20+ лет</div>
+                            <div class="stat-label" data-ru="Опыта команды" data-en="Team Experience">Опыта команды</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="principles-box">
+                    <h3 data-ru="Наши принципы" data-en="Our Principles">Наши принципы</h3>
+                    <div class="principle-item">
+                        <div class="principle-icon"><img src="assets/crane.png" alt="" /></div>
+                        <div class="principle-content">
+                            <strong data-ru="Только бетон и земля" data-en="Only Concrete and Land">Только бетон и земля</strong>
+                            <span data-ru="Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы." data-en="No stocks, crypto, or other virtual assets. Only what you can touch and what will survive any crisis.">Никаких бирж, крипты и прочей виртуальности. Только то, что можно потрогать руками и что переживет любые кризисы.</span>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon"><img src="assets/loop.png" alt="" /></div>
+                        <div class="principle-content">
+                            <strong data-ru="Сами проверяем всё" data-en="We Verify Everything Ourselves">Сами проверяем всё</strong>
+                            <span data-ru="Не полагаемся на &quot;экспертов&quot;. Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев." data-en="We don't rely on 'experts'. We personally inspect properties, verify documents, calculate financial models. We know each project inside out.">Не полагаемся на "экспертов". Лично проверяем объекты, сверяем документы, считаем финмодель. Знаем каждый проект как свои пять пальцев.</span>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon"><img src="assets/handshake.png" alt="" /></div>
+                        <div class="principle-content">
+                            <strong data-ru="Наши деньги там же, где и ваши" data-en="Our Money is Where Yours Is">Наши деньги там же, где и ваши</strong>
+                            <span data-ru="Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски." data-en="We invest together with you. We share both profits and risks.">Мы инвестируем вместе с Вами. Делим с вами и прибыль, и риски.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="trust">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ru="Безопасность" data-en="Security">Безопасность</span>
+                <h2 class="section-title" data-ru="Как защищены ваши инвестиции?" data-en="How are your investments protected?">Как защищены ваши инвестиции?</h2>
+                <p class="section-desc" data-ru="Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций." data-en="We use transparent collateral management in accordance with international standards. This is the market standard for protecting collective investments.">Мы используем прозрачное управление залогом в соответствии с международными стандартами. Это рыночный стандарт защиты коллективных инвестиций.</p>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon"><img src="assets/icon-collateral.png" alt="" /></div>
+                    <h3 data-ru="Реальный залог" data-en="Real Collateral">Реальный залог</h3>
+                    <p data-ru="Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций." data-en="Every euro is secured by a liquid asset (land or buildings) worth more than the investment amount.">Каждый евро обеспечен ликвидным активом (земля или здания) стоимостью, превышающей сумму инвестиций.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><img src="assets/icon-protection.png" alt="" /></div>
+                    <h3 data-ru="Защита активов" data-en="Asset Protection">Защита активов</h3>
+                    <p data-ru="Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства)." data-en="Assets under collateral management are segregated. They cannot be seized for the manager's personal debts (bankruptcy protection).">Имущество в управлении залогом обособлено. Оно не может быть взыскано по личным долгам управляющего (защита от банкротства).</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><img src="assets/icon-registration.png" alt="" /></div>
+                    <h3 data-ru="Всё зарегистрировано" data-en="Everything is Registered">Всё зарегистрировано</h3>
+                    <p data-ru="Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции." data-en="Collateral is officially registered. Each investor receives documents confirming their investment rights.">Залог регистрируется официально. Каждый инвестор получает документы подтверждающие право на свои инвестиции.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ru="Витрина" data-en="Showcase">Витрина</span>
+                <h2 class="section-title" data-ru="Актуальные проекты" data-en="Active Projects">Актуальные проекты</h2>
+                <p class="section-desc" data-ru="Выбирайте проекты с чёткой экономикой и надёжным залоговым обеспечением." data-en="Choose projects with clear economics and reliable collateral.">Выбирайте проекты с чёткой экономикой и надёжным залоговым обеспечением.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/clubhuose.jpg" alt="Клубный дом" onerror="this.style.display='none'">
+                        <span class="project-emoji">🏘️</span>
+                        <div class="project-type" data-ru="Редевелопмент/Квартиры" data-en="Redevelopment/Apartments">Редевелопмент/Квартиры</div>
+                        <div class="project-yield">35%</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-ru="«Клубный дом»" data-en="Club House">«Клубный дом»</h3>
+                        <p class="project-location" data-ru="Св. Константин и Елена" data-en="St. Constantine and Helena">Св. Константин и Елена</p>
+                        <p class="project-desc" data-ru="Реконструкция здания гостиницы в жилые квартиры, изменение статуса, оформление документации согласно законодательству Болгарии и последующая продажа со свободного рынка." data-en="Reconstruction of a hotel building into residential apartments, status change, documentation according to Bulgarian law and subsequent sale on the open market.">Реконструкция здания гостиницы в жилые квартиры, изменение статуса, оформление документации согласно законодательству Болгарии и последующая продажа со свободного рынка.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Доходность" data-en="Yield">Доходность</span>
+                                <span class="spec-value highlight" data-ru="40% годовых" data-en="30% annually">30% годовых</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Вход" data-en="Entry">Вход</span>
+                                <span class="spec-value">€400 000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Срок" data-en="Period">Срок</span>
+                                <span class="spec-value" data-ru="1 год" data-en="1 year">1 год</span>
+                            </div>
+                        </div>
+                        <a href="project1.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-ru="Подробнее" data-en="Learn More">Подробнее</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/Varna.jpg" alt="Жилой комплекс Варна" onerror="this.style.display='none'">
+                        <span class="project-emoji">🏢</span>
+                        <div class="project-type" data-ru="Строительство/Жилой комплекс" data-en="Construction/Residential Complex">Строительство/Жилой комплекс</div>
+                        <div class="project-yield">75%</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-ru="Жилой комплекс «Варна»" data-en="Residential Complex 'Varna'">Жилой комплекс «Варна»</h3>
+                        <p class="project-location" data-ru="Варна, Болгария" data-en="Varna, Bulgaria">Варна, Болгария</p>
+                        <p class="project-desc" data-ru="Строительство современного жилого комплекса в центре Варны. Квартиры с высокой арендной ставкой и потенциалом роста стоимости в динамично развивающемся районе." data-en="Construction of a modern residential complex in the center of Varna. Apartments with high rental rates and growth potential in a dynamically developing area.">Строительство современного жилого комплекса в центре Варны. Квартиры с высокой арендной ставкой и потенциалом роста стоимости в динамично развивающемся районе.</p>
+                        <div class="project-specs">
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Доходность" data-en="Yield">Доходность</span>
+                                <span class="spec-value highlight" data-ru="75% за период" data-en="75% for the period">75% за период</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Вход" data-en="Entry">Вход</span>
+                                <span class="spec-value">€500 000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label" data-ru="Срок" data-en="Period">Срок</span>
+                                <span class="spec-value" data-ru="3 года" data-en="3 years">3 года</span>
+                            </div>
+                        </div>
+                        <a href="project2.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-ru="Подробнее" data-en="Learn More">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners">
+        <div class="container">
+            <div class="partners-grid">
+                <div class="partners-text">
+                    <span class="about-tag" style="color: var(--accent);" data-ru="НЕТВОРКИНГ" data-en="NETWORKING">НЕТВОРКИНГ</span>
+                    <h2 data-ru="Партнерам" data-en="For Partners">Партнерам</h2>
+                    <p data-ru="Нужны деньги на проект или партнер с опытом? Давайте работать вместе. У нас есть капитал и команда." data-en="Need funding for a project or an experienced partner? Let's work together. We have capital and a team.">Нужны деньги на проект или партнер с опытом? Давайте работать вместе. У нас есть капитал и команда.</p>
+                    <p data-ru="Проводим закрытые встречи - там делимся опытом, обсуждаем проблемы. Присоединяйтесь, если занимаетесь серьезными проектами." data-en="We hold closed meetings where we share experiences and discuss challenges. Join us if you're working on serious projects.">Проводим закрытые встречи - там делимся опытом, обсуждаем проблемы. Присоединяйтесь, если занимаетесь серьезными проектами.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS6CVoDGZi7w4i2uSXSbXcDW25YhXXiP6Ms03OPjp51KP3XA/viewform?usp=publish-editor" class="btn-partners" target="_blank" data-ru="Предложить сотрудничество" data-en="Propose Cooperation">Предложить сотрудничество</a>
+                </div>
+                <div class="partners-box">
+                    <h3 data-ru="Чем можем помочь?" data-en="How can we help?">Чем можем помочь?</h3>
+                    <p data-ru="• Деньги: Найдем инвесторов для вашего проекта, если он стоящий.<br>• Опыт: Поможем упаковать продукт, настроить маркетинг и продажи.<br>• Общение: Регулярные встречи для разбора ваших кейсов и мозговых штурмов.<br>• Связи: Подключим своих проверенных строителей, юристов, проектировщиков." data-en="• Money: We'll find investors for your project if it's worthy.<br>• Experience: We'll help package your product, set up marketing and sales.<br>• Communication: Regular meetings for case analysis and brainstorming.<br>• Connections: We'll connect you with our trusted builders, lawyers, and designers.">• Деньги: Найдем инвесторов для вашего проекта, если он стоящий.<br>
+• Опыт: Поможем упаковать продукт, настроить маркетинг и продажи.<br>
+• Общение: Регулярные встречи для разбора ваших кейсов и мозговых штурмов.<br>
+• Связи: Подключим своих проверенных строителей, юристов, проектировщиков.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-ru="Основатели" data-en="Founders">Основатели</span>
+            </div>
+            <div class="founder-grid">
+                <!-- Founder 1: Александр Фанайлов -->
+                <div class="founder-card">
+                    <div class="founder-image-wrapper">
+                        <img src="assets/founder 1.png?v=4" alt="Александр Фанайлов" style="object-position: center;">
+                    </div>
+                    <div class="founder-content">
+                        <h3 data-ru="Александр Фанайлов" data-en="Alexander Fanaylov">Александр Фанайлов</h3>
+                        <p class="founder-quote" data-ru="&quot;Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций.&quot;" data-en="&quot;We select projects so that returns are obvious and clear immediately. And we guarantee money protection - the kind we would want for our own investments.&quot;">"Мы отбираем проекты так, чтобы доход был очевидным и понятен сразу. И гарантируем защиту денег - такую, какую хотели бы сами для своих инвестиций."</p>
+                        <p class="founder-bio" data-ru="20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале" data-en="20 years in real estate and finance in the Moscow market, worked on projects with Samolet, PIK and other major developers. Managed procurement of investment assets in several companies with an average plan of 500 million rubles per quarter. Worked in Moscow with private investors individually, now bringing my experience to Bulgaria and building a healthy investment company where you can earn on your capital">20 лет в недвижимости и финансах на Московском рынке, занимался проектами с «Самолет», «ПИК» и с другими крупными застройщиками. Руководил закупками инвестиционных активов в ряде компаний со средним планом 500 млн. рублей в квартал. Работал в Москве с частными инвесторами в индивидуальном порядке, теперь переношу свой опыт в Болгарию и строю инвестиционную компанию здорового человека с которой можно зарабатывать на своем капитале</p>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-ru="Структурирование сделок" data-en="Deal Structuring">Структурирование сделок</div>
+                            <div class="skill-item" data-ru="Оценка инвестиций" data-en="Investment Evaluation">Оценка инвестиций</div>
+                            <div class="skill-item" data-ru="Управление девелопментом" data-en="Development Management">Управление девелопментом</div>
+                            <div class="skill-item" data-ru="Управление портфелем" data-en="Portfolio Management">Управление портфелем</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="founder-card">
+                    <div class="founder-image-wrapper">
+                        <img src="assets/founder 2.jpeg?v=4" alt="Александр Недялков" style="object-position: center;">
+                    </div>
+                    <div class="founder-content">
+                        <h3 data-ru="Александр Недялков" data-en="Alexander Nedyalkov">Александр Недялков</h3>
+                        <p class="founder-quote" data-ru="«Моя сильная сторона — ведение переговоров и умение разглядеть в необработанном камне будущий бриллиант»" data-en="&quot;My strength is negotiation and the ability to see a future diamond in a rough stone&quot;">«Моя сильная сторона — ведение переговоров и умение разглядеть в необработанном камне будущий бриллиант»</p>
+                        <p class="founder-bio" data-ru="Более 20 лет практического опыта в строительстве и недвижимости в Болгарии.<br><br>Реализую общественные и частные строительные проекты по всей стране: водоснабжение и канализация, повышение энергоэффективности зданий, строительство и модернизация оптических сетей. Работаю с крупными объектами на всех этапах — от планирования до контроля сроков, качества и бюджета.<br><br>Глубоко понимаю реальную себестоимость, риски и особенности строительных проектов. Владел и управлял агентством недвижимости в Софии. Отлично разбираюсь в ценообразовании, локациях, инвестиционной привлекательности объектов и их ликвидности.<br><br>Помогаю частным инвесторам безопасно заходить на рынок недвижимости Болгарии, понимать реальную стоимость проектов, избегать ошибок и выбирать объекты с высоким потенциалом. Сопровождаю инвесторов от выбора проекта, понимания всех этапов и рисков до выхода из проекта и получения прибыли.<br><br>Работаю исключительно на основе многолетнего практического опыта, а не теории." data-en="Over 20 years of practical experience in construction and real estate in Bulgaria.<br><br>I implement public and private construction projects throughout the country: water supply and sewerage, improving building energy efficiency, construction and modernization of optical networks. I work with large facilities at all stages — from planning to monitoring timelines, quality and budget.<br><br>I deeply understand the real cost, risks and specifics of construction projects. I owned and managed a real estate agency in Sofia. I have excellent knowledge of pricing, locations, investment attractiveness of properties and their liquidity.<br><br>I help private investors safely enter the Bulgarian real estate market, understand the real cost of projects, avoid mistakes and choose properties with high potential. I accompany investors from project selection, understanding all stages and risks to exiting the project and making a profit.<br><br>I work exclusively based on years of practical experience, not theory.">Более 20 лет практического опыта в строительстве и недвижимости в Болгарии.<br><br>Реализую общественные и частные строительные проекты по всей стране: водоснабжение и канализация, повышение энергоэффективности зданий, строительство и модернизация оптических сетей. Работаю с крупными объектами на всех этапах — от планирования до контроля сроков, качества и бюджета.<br><br>Глубоко понимаю реальную себестоимость, риски и особенности строительных проектов. Владел и управлял агентством недвижимости в Софии. Отлично разбираюсь в ценообразовании, локациях, инвестиционной привлекательности объектов и их ликвидности.<br><br>Помогаю частным инвесторам безопасно заходить на рынок недвижимости Болгарии, понимать реальную стоимость проектов, избегать ошибок и выбирать объекты с высоким потенциалом. Сопровождаю инвесторов от выбора проекта, понимания всех этапов и рисков до выхода из проекта и получения прибыли.<br><br>Работаю исключительно на основе многолетнего практического опыта, а не теории.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-ru="Ведение переговоров" data-en="Negotiation">Ведение переговоров</div>
+                            <div class="skill-item" data-ru="Риск-менеджмент" data-en="Risk Management">Риск-менеджмент</div>
+                            <div class="skill-item" data-ru="Инсайдерская экспертиза рынка" data-en="Insider Market Expertise">Инсайдерская экспертиза рынка</div>
+                            <div class="skill-item" data-ru="Ускорение ключевых процессов" data-en="Process Acceleration">Ускорение ключевых процессов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo">
+                        <img src="assets/logo fenix 2.png" alt="Devenvest">
+                        <span class="footer-brand-name">DEVENVEST</span>
+                    </div>
+                    <p class="footer-brand-text" data-ru="Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнеров." data-en="We invest in real estate and development. Making investments clear and reliable for our partners.">Инвестируем в недвижимость и девелопмент. Делаем инвестиции понятными и надежными для наших партнеров.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-ru="Навигация" data-en="Navigation">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" data-ru="О компании" data-en="About">О компании</a></li>
+                        <li><a href="#trust" data-ru="Безопасность" data-en="Security">Безопасность</a></li>
+                        <li><a href="#projects" data-ru="Проекты" data-en="Projects">Проекты</a></li>
+                        <li><a href="#partners" data-ru="Партнёрам" data-en="Partners">Партнёрам</a></li>
+                        <li><a href="#founder" data-ru="Основатели" data-en="Founders">Основатели</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-ru="Ресурсы" data-en="Resources">Ресурсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/profile.php?id=61587159071997" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a></li>
+                    </ul>
+                </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-ru="&copy; 2026 Devenvest. Все права защищены." data-en="&copy; 2026 Devenvest. All rights reserved.">&copy; 2026 Devenvest. Все права защищены.</p>
+                <span data-ru="Профессиональная платформа инвестиций в недвижимость" data-en="Professional real estate investment platform">Профессиональная платформа инвестиций в недвижимость</span>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Current language state
         let currentLang = 'ru';
 
+        // Toggle language function
         function toggleLanguage() {
             currentLang = currentLang === 'ru' ? 'en' : 'ru';
-
-            document.documentElement.lang = currentLang;
-
-            const elements = document.querySelectorAll('[data-ru]');
-            elements.forEach(el => {
-                const ruText = el.getAttribute('data-ru');
-                const enText = el.getAttribute('data-en');
-                el.innerHTML = currentLang === 'ru' ? ruText : enText;
-            });
-
+            
+            // Update button text
             const langBtn = document.getElementById('langBtn');
-            if (langBtn) langBtn.textContent = currentLang === 'ru' ? 'EN' : 'RU';
             const langBtnMobile = document.getElementById('langBtnMobile');
+            if (langBtn) langBtn.textContent = currentLang === 'ru' ? 'EN' : 'RU';
             if (langBtnMobile) langBtnMobile.textContent = currentLang === 'ru' ? 'EN' : 'RU';
+            
+            // Update all elements with data-ru and data-en attributes
+            const elements = document.querySelectorAll('[data-ru][data-en]');
+            elements.forEach(element => {
+                const text = currentLang === 'ru' ? element.getAttribute('data-ru') : element.getAttribute('data-en');
+                if (text) {
+                    // Check if text contains HTML tags (br, etc)
+                    if (text.includes('<br>') || text.includes('<')) {
+                        element.innerHTML = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+            
+            // Save language preference
+            localStorage.setItem('language', currentLang);
         }
+
+        // Load saved language on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && savedLang === 'en') {
+                toggleLanguage();
+            }
+        });
 
         function toggleMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (!mobileMenu) return;
-            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                mobileMenu.style.display = 'block';
-            } else {
-                mobileMenu.style.display = 'none';
-            }
+            const overlay = document.getElementById('menuOverlay');
+            const panel = document.getElementById('menuPanel');
+            overlay.classList.toggle('active');
+            panel.classList.toggle('active');
         }
 
-        function scrollToSection(id) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const yOffset = -80;
-            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // Close menu if it's open
+                    const panel = document.getElementById('menuPanel');
+                    if (panel && panel.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuPanel = document.getElementById('menuPanel');
+            const hamburger = document.querySelector('.hamburger');
+            const overlay = document.getElementById('menuOverlay');
+            const langBtn = document.getElementById('langBtn');
+            const langBtnMobile = document.getElementById('langBtnMobile');
+            
+            // Don't close if clicking on language buttons
+            if (event.target === langBtn || event.target === langBtnMobile) {
+                return;
+            }
+            
+            if (!menuPanel.contains(event.target) && !hamburger.contains(event.target)) {
+                menuPanel.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
     </script>
 </body>
 
